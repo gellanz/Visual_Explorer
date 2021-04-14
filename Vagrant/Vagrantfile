@@ -1,0 +1,40 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "ubuntu/bionic64"
+  # config.ssh.username = 'root'
+  # config.ssh.password = 'vagrant'
+  # config.ssh.insert_key = 'true'
+  # Provider Settings
+  config.vm.provider "virtualbox" do |vb|
+  vb.memory = 512
+  vb.cpus = 1
+  end
+
+  # Network settings
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+  # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+  # config.vm.network "private_network", ip: "192.168.33.10"
+  # config.vm.network "public_network"
+
+  # Folder Settings
+  # config.vm.synced_folder "../data", "/vagrant_data"
+
+  # Provision Settings
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo apt-get update
+    sudo apt install net-tools
+    sudo apt-get install git
+    sudo wget "https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/7.4.7/xampp-linux-x64-7.4.7-0-installer.run/download" -O xampp-installer.run
+    cd /
+    sudo chmod +x xampp-installer.run
+    sudo ./xampp-installer.run
+    
+    # apt-get install -y apache2
+  SHELL
+
+
+end
