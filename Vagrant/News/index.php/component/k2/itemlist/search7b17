@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="en-gb">
+	<title type="text">Search results for: </title>
+	<subtitle type="text"></subtitle>
+	<link rel="alternate" type="text/html" href="http://127.0.0.1:8080"/>
+	<id>http://127.0.0.1:8080/News/index.php/component/k2/itemlist/search</id>
+	<updated>2021-04-27T20:02:26+00:00</updated>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://127.0.0.1:8080/News/index.php/component/k2/itemlist/search?format=feed&amp;type=atom"/>
+</feed>

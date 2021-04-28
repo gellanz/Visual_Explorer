@@ -1,0 +1,131 @@
+/* search module */
+.dj_cf_search .djcf_se_row label, .dj_cf_search .djseform_field span.label {
+	text-align: left;
+}
+.dj_cf_search .search_radius .inputbox {
+	width: 50%!important;
+}
+.search_price span.label1,
+.search_price span.label2{
+	text-align: left;
+  float: left;
+width: 50px;
+margin-top: 5px;
+}
+.search_only_images span.label ,
+.search_only_video span.label {
+	color: #333;
+	text-align: left;
+}
+.dj_cf_search .search_price input.inputbox {
+  width: 300px;
+}
+
+.dj_cf_search button.button {
+	padding: 20px;
+	background-image: none;
+	border: 1px solid #333;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	width: 200px;
+	background: #fafafa;
+}
+.dj_cf_search button.button:hover {
+	background:  rgb(26, 40, 62);
+}
+.dj_cf_search {
+  border: 2px solid #999;
+	padding: 10px;
+}
+span.row_negotiable {
+  text-align: left!important;
+  font-size: 12px;
+}
+#dj-classifieds .dj-item .general_det span.row_label {
+  background-position: 2px 4px;
+}
+#dj-classifieds .dj-item h2 {
+  padding-bottom: 5px;
+}
+
+#dj-classifieds .dj-item .buynow_outer label {
+  margin-left: 0;
+  font-size: 12px;
+  color: orange;
+  font-weight: bold;
+}
+#dj-classifieds .dj-item .buynow_outer {
+  float: left;
+}
+#dj-classifieds .dj-item .djc_thumbnails .djc_thumbnail {
+  padding: 5px;
+  border: 1px solid #f1f1f1;
+}
+#dj-classifieds .dj-item .description h2,
+#dj-classifieds .dj-item .custom_det h2,
+#dj-classifieds .dj-item .additional h2,
+#dj-classifieds .dj-item .localization_det h2 {
+  background-position: 2px 5px;
+  background-color: #fafafa;
+  padding: 10px;
+  background-position: 8px 14px;
+  padding-left: 27px;
+}
+.projects-wrapper .project-img .project-img-extra .project-img-extra-content a {
+  color: #fff;
+}
+#dj-classifieds .pagination ul li.active a {
+  color: #fff;
+}
+#dj-classifieds .dj-item .general_det .added span.row_label,
+#dj-classifieds .dj-item .general_det .djcf_contact span.row_label,
+#dj-classifieds .djcf_items_blog .category .label_title {
+  background-position: 3px 4px;
+}
+#sp-search .sp-module {
+  margin: 0;
+}
+.tour-listing-search .sp-module.col-sm-3 {
+  padding-left: 0;
+}
+#dj-classifieds .dj-category .cat_row {
+  padding-bottom: 15px;
+}
+div#dj-classifieds.clearfix.djcftheme-default {
+  margin-top: 40px;
+}
+.mod_djclassifieds_items .title img,
+#dj-classifieds .djcf_items_blog .item_img img{
+  opacity: 0.9;
+}
+.mod_djclassifieds_items .title img:hover,
+#dj-classifieds .djcf_items_blog .item_img img:hover {
+  opacity: 1;
+}
+.mod_djclassifieds_items div.title span.date, .mod_djclassifieds_items div.title span.category, .mod_djclassifieds_items div.title span.type, .mod_djclassifieds_items div.title span.price,
+.mod_djclassifieds_items div.title span.region{
+  float: left;
+padding-left: 8px;
+padding-right: 8px;
+  height: 25px;
+  border: 1px solid #fafafa;
+}
+#dj-classifieds .dj-item .custom_det_content { 
+ column-count: 2;
+}
+
+/* respnsive */
+@media (max-width: 767px) {
+   .mod_djclassifieds_items div.items-col {
+      width: 100%!important;
+    }
+	.mod_djclassifieds_items div.title a.title {
+  		text-align: left;
+	}
+  	#et-intro-sub {
+   	 	width: 100%!important;
+  	}
+  .dj_cf_search {
+    margin-top: 50px;
+  }
+}

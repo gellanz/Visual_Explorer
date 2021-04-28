@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Catálogos</title>
+		<description><![CDATA[]]></description>
+		<link>http://127.0.0.1:8080/News/index.php/catalogos/19-joomla</link>
+		<lastBuildDate>Tue, 27 Apr 2021 20:02:55 +0000</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://127.0.0.1:8080/News/index.php/catalogos/19-joomla?format=feed&amp;type=rss"/>
+		<language>en-gb</language>
+		<item>
+			<title>Descripción del conjunto de documentos</title>
+			<link>http://127.0.0.1:8080/News/index.php/visualizaciones/descripcion-bd</link>
+			<guid isPermaLink="true">http://127.0.0.1:8080/News/index.php/visualizaciones/descripcion-bd</guid>
+			<description><![CDATA[<p>En estas visualizaciones se muestran las métricas del conjunto de documentos, como son número total de documentos, número de documentos por fuente de datos y por categoría. Es posible agregar<span style="font-size: 12.16px;"> filtros para buscar documentos relacionados a un tema,  categorías, y/o periodos de tiempo específicos.</span></p>
+<p><span style="font-size: 12.16px;">Por el momento esta página se puede consultar únicamente conectándose desde alguna red del IPN.</span></p>
+<p><span style="font-size: 12.16px;">{loadmodule mod_wrapper,describeBD}</span></p>]]></description>
+			<category>Joomla!</category>
+			<pubDate>Tue, 12 May 2020 02:57:29 +0000</pubDate>
+		</item>
+		<item>
+			<title>¿Para qué sirve la herramienta?</title>
+			<link>http://127.0.0.1:8080/News/index.php/catalogos/19-joomla/89-para-que-sirve-la-herramienta</link>
+			<guid isPermaLink="true">http://127.0.0.1:8080/News/index.php/catalogos/19-joomla/89-para-que-sirve-la-herramienta</guid>
+			<description><![CDATA[<p class="MsoNormal" style="text-align: justify;"><span lang="ES">“Visual Explorer” nace de la necesidad de filtrar información específica de eventos estudiados en periodos de tiempo concretos, obteniendo así datos confiables y entendibles para el usuario. Su función principal es automatizar procesos para optimizar la extracción de información, y posteriormente transformarla para que pueda visualizarse de manera gráfica; de esta manera el usuario puede analizarla y guiarse de una manera sólida hacia la correcta toma de decisiones. Su planificación conllevó un arduo trabajo de investigación, programación y operatividad de otras diversas herramientas para funcionar de manera adecuada; dentro de este manual de operación se pretende dar a conocer la forma más óptima de uso y se muestran algunos ejemplos.</span></p>]]></description>
+			<category>Joomla!</category>
+			<pubDate>Fri, 28 Feb 2020 02:55:51 +0000</pubDate>
+		</item>
+		<item>
+			<title>Descripción de la herramienta</title>
+			<link>http://127.0.0.1:8080/News/index.php/catalogos/19-joomla/88-descripcion-de-la-herramienta</link>
+			<guid isPermaLink="true">http://127.0.0.1:8080/News/index.php/catalogos/19-joomla/88-descripcion-de-la-herramienta</guid>
+			<description><![CDATA[<p style="text-align: justify;"><span lang="ES" style="font-size: 11.0pt; line-height: 107%; font-family: 'Calibri','sans-serif'; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: ES; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">Esta herramienta sirve para aplicar técnicas de procesamiento de lenguaje natural, minería de datos, recuperación de la información textual y ciencia de datos, que entre otras cosas, se encargan de la recuperación de información y el procesamiento de la misma, con el fin de filtrar información, y encontrar patrones que ayuden al usuario a generar análisis de manera eficaz y rápida; esta herramienta extrae la información de RSS, por sus siglas en inglés “Really Simply Sindication”, que es un formato XML para distribuir noticias en la web, dicha información está actualizada, lo que permite ofrecer análisis automáticos en tiempo real con algoritmos de búsqueda flexibles, que obtienen como resultado búsquedas ágiles y relevantes dentro de una gran cantidad de datos. “Visual Explorer” genera las visualizaciones de la información obtenida para que el usuario pueda trabajar en el análisis de acuerdo a sus requerimientos.</span></p>]]></description>
+			<category>Joomla!</category>
+			<pubDate>Fri, 28 Feb 2020 02:50:54 +0000</pubDate>
+		</item>
+		<item>
+			<title>Objetivo</title>
+			<link>http://127.0.0.1:8080/News/index.php/catalogos/19-joomla/87-objetivo</link>
+			<guid isPermaLink="true">http://127.0.0.1:8080/News/index.php/catalogos/19-joomla/87-objetivo</guid>
+			<description><![CDATA[<p class="MsoNormal" style="text-align: justify;"><span lang="ES">La herramienta “Visual Explorer” esta diseñada como un instrumento de apoyo que facilite los procesos de extracción, procesamiento y transformación de los datos, según las necesidades de los usuarios.</span></p>
+<p class="MsoNormal" style="text-align: justify;"> </p>
+<p class="MsoNormal" style="text-align: justify;"><span lang="ES">De manera particular se busca ayudar a los usuarios a localizar patrones, en noticias publicadas en sitios web en español y transformar la información de manera que se puedan analizar los resultados de manera óptima y ágil para los usuarios.</span></p>]]></description>
+			<category>Joomla!</category>
+			<pubDate>Fri, 28 Feb 2020 02:49:51 +0000</pubDate>
+		</item>
+		<item>
+			<title>VISUAL EXPLORER</title>
+			<link>http://127.0.0.1:8080/News/index.php/catalogos/19-joomla/86-visual-explorer</link>
+			<guid isPermaLink="true">http://127.0.0.1:8080/News/index.php/catalogos/19-joomla/86-visual-explorer</guid>
+			<description><![CDATA[<p class="MsoNormal" style="text-align: justify;"><span lang="ES">Todos los días ocurren una gran cantidad de eventos de diferentes tipos, los cuales pueden ser relevantes para diferentes sectores de la población, cada grupo de personas puede estar interesado en mantenerse informado sobre algún tipo de acontecimiento en particular, para lo cual debe navegar entre una gran cantidad de contenidos publicados en diferentes medios, vale la pena resaltar que debido al volumen y rapidez de publicación se superan las capacidades de los seres humanos como individuos o grupos para leer y estudiar la información, adicionalmente se debe recordar que existen muchos tipos de usuarios en internet, desde los expertos en tecnologías de información capaces de comprender y aplicar procesos de análisis complejos, hasta aquellos que desconocen el uso de aplicaciones computacionales complicadas. Dado estas razones se creó la herramienta <i>VisualExplorer</i>, desarrollada en el LCDyTS del CIC-IPN, se enfoca en el análisis de noticias en español, publicadas en sitios de internet gratuitos, <i>VisualExplorer</i> permite recuperar la información que coincida con los criterios de búsqueda establecidos por el usuario, procesarla, y desplegar una serie de visualizaciones que apoyen en monitoreo y entendimiento de los eventos.</span></p>
+<p class="MsoNormal" style="text-align: justify;">  </p>]]></description>
+			<category>Joomla!</category>
+			<pubDate>Fri, 28 Feb 2020 02:36:14 +0000</pubDate>
+		</item>
+		<item>
+			<title>Recursos adicionales</title>
+			<link>http://127.0.0.1:8080/News/index.php/catalogos</link>
+			<guid isPermaLink="true">http://127.0.0.1:8080/News/index.php/catalogos</guid>
+			<description><![CDATA[<p>En esta sección se pueden consultar y descargar los recursos generados como subproductos de trabajo:</p>
+<p> </p>
+<p><strong>Catálogo de sinónimos:</strong> Consiste en un archivo csv con los sinónimos descargados de Internet. La columna "WORD" contiene el sinónimo estándar; mientras que "SYNONYM" contiene la lista de los sinónimos.</p>
+<p>Se puede descargar en el siguiente enlace: <a title="Catálogo de sinónimos" href="https://drive.google.com/open?id=1H96s4GD3C9DL6i8qRalhBabMGFB3Flhg" target="_blank" rel="noopener noreferrer">Catálogo de sinónimos</a></p>
+<p> </p>
+<p><strong>Catálogo de palabras vacías:</strong> Contiene las stop words que se remueven de las noticias como parte de su preparación, se encuentra en formato csv.</p>
+<p>Para acceder a este recurso siga la siguiente liga: <a title="Catálogo de palabras vacías" href="https://drive.google.com/open?id=1CRaX0EM6f42swhZc50RxjbS9HwTdTQmO" target="_blank" rel="noopener noreferrer">Catálogo de palabras vacías</a></p>
+<p> </p>
+<p><strong>Lista de palabras más comunes en español:</strong> El archivo de texto contiene el listado de las 10,000 palabras más frecuentes en español de acuerdo con la Real Academia Española (el listado se puede obtener de su sitio web oficial), vale la pena mencionar que este listado contiene palabras vacías y no esta lematizado.</p>
+<p>Para consultar el listado en este link: <a title="10,000 Palabras más comunes en español" href="https://drive.google.com/open?id=1I_fiFudpInQTiIeTBu4jVsXzKZdZyqMS" target="_blank" rel="noopener noreferrer">10,000 Palabras más comunes en español</a></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>]]></description>
+			<category>Joomla!</category>
+			<pubDate>Tue, 25 Feb 2020 18:50:02 +0000</pubDate>
+		</item>
+		<item>
+			<title>Jumi_php_prueba1</title>
+			<link>http://127.0.0.1:8080/News/index.php/catalogos/19-joomla/84-jumi-php-prueba1</link>
+			<guid isPermaLink="true">http://127.0.0.1:8080/News/index.php/catalogos/19-joomla/84-jumi-php-prueba1</guid>
+			<description><![CDATA[<p> </p>
+<p>{loadmodule mod_jumi,Jumi_php_prueba1}</p>
+<p> </p>
+<p>{loadmodule mod_jumi,Jumi_php_prueba1}</p>
+<p> </p>
+<pre><div style="color:#FF0000;background:#FFFF00;">ERROR_CONTENT</div>&lt;?php echo 'Hello Harra!'; ?&gt;{/jumi}</pre>]]></description>
+			<category>Joomla!</category>
+			<pubDate>Fri, 18 Oct 2019 20:15:35 +0000</pubDate>
+		</item>
+		<item>
+			<title>php_hola_mundo_test3</title>
+			<link>http://127.0.0.1:8080/News/index.php/catalogos/19-joomla/83-php-hola-mundo-test3</link>
+			<guid isPermaLink="true">http://127.0.0.1:8080/News/index.php/catalogos/19-joomla/83-php-hola-mundo-test3</guid>
+			<description><![CDATA[<p><code><span style="color: #000000;"> <span style="color: #0000bb;">&lt;?php </span><span style="color: #007700;">echo </span><span style="color: #dd0000;">'&lt;p&gt;Hola Mundo&lt;/p&gt;'</span><span style="color: #007700;">; </span><span style="color: #0000bb;">?&gt;</span></span></code></p>
+<p><code></code></p>
+]]></description>
+			<category>Joomla!</category>
+			<pubDate>Fri, 18 Oct 2019 20:05:16 +0000</pubDate>
+		</item>
+		<item>
+			<title>kibana_canvas_prueba</title>
+			<link>http://127.0.0.1:8080/News/index.php/catalogos/19-joomla/82-kibana-canvas-prueba</link>
+			<guid isPermaLink="true">http://127.0.0.1:8080/News/index.php/catalogos/19-joomla/82-kibana-canvas-prueba</guid>
+			<description><![CDATA[<p>Se agrega un modulo que apunta a una presentación canvas de Kibana</p>
+<p> </p>
+<p>{loadmodule mod_wrapper,kibana_canvas_prueba}</p>]]></description>
+			<category>Joomla!</category>
+			<pubDate>Fri, 18 Oct 2019 18:44:41 +0000</pubDate>
+		</item>
+		<item>
+			<title>php_hola_mundo_test</title>
+			<link>http://127.0.0.1:8080/News/index.php/catalogos/19-joomla/81-php-hola-mundo-test</link>
+			<guid isPermaLink="true">http://127.0.0.1:8080/News/index.php/catalogos/19-joomla/81-php-hola-mundo-test</guid>
+			<description><![CDATA[<p> </p>
+<p> </p>
+<p>{loadmodule mod_custom,php_hola_mundo_test2} </p>
+<p> </p>]]></description>
+			<category>Joomla!</category>
+			<pubDate>Thu, 17 Oct 2019 20:35:00 +0000</pubDate>
+		</item>
+	</channel>
+</rss>

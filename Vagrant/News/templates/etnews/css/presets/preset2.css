@@ -1,0 +1,213 @@
+a {
+  color: #44b272;
+}
+a:hover {
+  color: #0e9cd1;
+}
+.sp-megamenu-parent >li.active>a,
+.sp-megamenu-parent >li:hover>a {
+  color: #44b272;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item >a:hover {
+  background: #44b272;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active>a {
+  color: #44b272;
+}
+#offcanvas-toggler >i {
+  color: #FFF;
+}
+#offcanvas-toggler >i:hover {
+  color: #44b272;
+}
+.projects-filter a.selected, .projects-filter a.selected:hover,
+.btn-primary,
+.sppb-btn-primary {
+  background-color: #44b272;
+}
+.btn-primary:hover,
+.sppb-btn-primary:hover {
+  border-color: #44b272;
+  background-color: #0e9cd1;
+}
+ul.social-icons >li a:hover {
+  color: #44b272;
+}
+.sp-page-title {
+  background: #44b272;
+}
+.layout-boxed .body-innerwrapper {
+  background: #ffffff;
+}
+.sp-module ul >li >a {
+  color: #000000;
+}
+.sp-module ul >li >a:hover {
+  color: #44b272;
+}
+.sp-module .latestnews >div >a {
+  color: #000000;
+}
+.sp-module .latestnews >div >a:hover {
+  color: #44b272;
+}
+.sp-module .tagscloud .tag-name:hover {
+  background: #44b272;
+}
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li.active > a,
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li > a:hover {
+  background: #44b272;
+}
+.search .btn-toolbar button {
+  background: #44b272;
+}
+.post-format {
+  background: #44b272;
+}
+.voting-symbol span.star.active:before {
+  color: #44b272;
+}
+.sp-rating span.star:hover:before,
+.sp-rating span.star:hover ~ span.star:before {
+  color: #0e9cd1;
+}
+.entry-link,
+.entry-quote {
+  background: #44b272;
+}
+blockquote {
+  border-color: #44b272;
+}
+.carousel-left:hover,
+.carousel-right:hover {
+  background: #44b272;
+}
+#sp-footer {
+  background: #44b272;
+}
+.sp-comingsoon body {
+  background-color: #44b272;
+}
+.pagination>li>a,
+.pagination>li>span {
+  color: #000000;
+}
+.pagination>li>a:hover,
+.pagination>li>a:focus,
+.pagination>li>span:hover,
+.pagination>li>span:focus {
+  color: #000000;
+}
+.pagination>.active>a,
+.pagination>.active>span {
+  border-color: #44b272;
+  background-color: #44b272;
+}
+.pagination>.active>a:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:hover,
+.pagination>.active>span:focus {
+  border-color: #44b272;
+  background-color: #44b272;
+}
+#et-text1,
+.et-title h6,
+.et-feature-item:hover i,
+.et-portfolio-button:hover,
+.et-action-button:hover,
+.et-table-item:hover button {
+  background: #44b272;
+}
+.tp-caption.excerpt_2, .excerpt_2,
+.et-feature-item h4,
+.et-table-item h3,
+.et-table-item .table-price .price,
+.et-table-item button:hover a,
+.et-testimonial p.qx-designation,
+.et-testimonial button,
+.et-team-item h4 {
+  color: #44b272; 
+}
+.et-feature-item:hover i,
+.et-portfolio-button:hover,
+.et-action-button:hover,
+.et-button-view .qx-element-button a.qx-btn,
+.et-table-item:hover,
+.et-slider .tp-caption:hover a,
+.et-table-item button,
+.et-subscribe-content table .button:hover {
+  border-color: #44b272!important;
+}
+/* Important */
+.tp-caption.excerpt_second, .excerpt_second b,
+.tp-caption.excerpt_1a, .excerpt_1a strong,
+#et-intro-sub h2,
+#et-intro-sub i,
+.et-services-item:hover i,
+.et-title-general h3,
+.et-intro-right h4,
+.et-about-item h4,
+.et-title h4,
+.et-team-item:hover p,
+.et-intro-right h5,
+.et-service-item:hover h6,
+.et-services-item:hover h4,
+.et-action-button:hover,
+.et-counter-item i,
+.et-new-more-item h4,
+.et-blog-new-more div.k2ItemsBlock ul li span.moduleItemDateCreated,
+.et-new-item h4,
+.et-blog-business div.k2ItemsBlock ul li span.moduleItemHits,
+.et-video-new-left p,
+.et-enroll-item i,
+.tp-caption a,
+div.itemIsFeatured:before, div.catItemIsFeatured:before, div.userItemIsFeatured:before,
+.et-business-left div.k2ItemsBlock ul li span.moduleItemDateCreated,
+.et-business-right div.k2ItemsBlock ul li span.moduleItemDateCreated,
+.et-entertainment-sub .qx-btn-default,
+#et-service .et-service-item i,
+.et-about-item .qx-btn-default {
+  color: #44b272!important; 
+}
+.et-contact #sp-quickcontact-form .button:hover,
+#et-service-sub:hover,
+.et-courses-sub,
+.et-button-view .qx-element-button a.qx-btn,
+.et-title h3,
+.et-slider .tp-caption a.tp-button:hover,
+.et-title-top h3,
+div.k2Pagination ul li.active a,
+.et-subscribe-content table .button:hover {
+  background: #44b272!important;  
+}
+.et-contact-form button:hover,
+.qx-progress-bar,
+.projects-filter a.selected,
+.projects-filter a:hover,
+.et-contact-form button,
+#et-something-button,
+.et-button-general:hover,
+.et-button-general:hover,
+.et-sub-build-item:hover {  
+  background-color:#44b272!important;
+}
+.et-contact #sp-quickcontact-form .button:hover,
+.btn-primary,
+.et-about-item .qx-btn-default {
+  border:1px solid #44b272!important; 
+}
+
+.et-about-item .qx-element-image:before {
+  border:7px solid #44b272;
+}
+.projects-wrapper .project-img .project-img-extra {
+    background-image: -webkit-linear-gradient(top , rgba(255, 174, 0, 0.51) 0%, rgba(255, 174, 0, 0.51) 100%)!important;
+}
+
+/* DJ Classifield preset */
+#dj-classifieds .dj-item .description h2,
+#dj-classifieds .dj-item .custom_det h2,
+#dj-classifieds .dj-item .additional h2,
+#dj-classifieds .dj-item .localization_det h2 {
+  border-left: 5px solid #44b272;
+}
