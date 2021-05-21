@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Update Packages
 apt-get update
 # Upgrade Packages
@@ -12,42 +14,24 @@ apt-get install -y apache2
 # Enable Apache Mods
 a2enmod rewrite
 
-# Create the folder where the website will be hosted
-cd /opt/lampp/html
-mkdir -p News
-
 # Restart Apache
 sudo service apache2 restart
 
-#Add Onrej PPA Repo
-# apt-add-repository ppa:ondrej/php
-# apt-get update
-
-# Install PHP
-# apt-get install -y php8.0
-
-# PHP Apache Mod
-# apt-get install -y libapache2-mod-php8.0
+# Setting MySQL root user password root/root
+debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
+debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
 
 
+# Installing packages
+apt-get install -y mysql-server mysql-client
 
-# PHP Mods
-# apt-get install -y php8.0-common
-# apt-get install -y php8.0-mcrypt
-# apt-get install -y php8.0-zip
+# Allow External Connections on your MySQL Service
+sudo sed -i -e 's/bind-addres/#bind-address/g' /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo sed -i -e 's/skip-external-locking/#skip-external-locking/g' /etc/mysql/mysql.conf.d/mysqld.cnf
+mysql -u root -proot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root'; FLUSH privileges;"
+sudo service mysql restart
 
-# Debconf
-# apt-get install -y debconf-utils
+echo -e "Si es la primera vez que se construirá la base de datos o si la máquina virtual
+         se destruyó, se tienen que ejecutar los siguientes comandos: \n
+         cd /scripts \n ./boot_db_first_time.sh"
 
-# Set MySQL Pass
-# debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
-# debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
-
-# Install MySQL
-# apt-get install -y mysql-server
-
-# PHP-MYSQL lib
-# apt-get install -y php8.0-mysql
-
-# Restart Apache
-# sudo service apache2 restart
