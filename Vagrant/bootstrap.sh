@@ -8,6 +8,9 @@ apt-get upgrade
 # Basic Linux Stuff
 apt-get install -y git
 
+#dos2unix
+apt-get install dos2unix
+
 # Apache
 apt-get install -y apache2
 
@@ -34,4 +37,8 @@ sudo service mysql restart
 echo -e "Si es la primera vez que se construirá la base de datos o si la máquina virtual
          se destruyó, se tienen que ejecutar los siguientes comandos: \n
          cd /scripts \n ./boot_db_first_time.sh"
+
+cd /scripts
+dos2unix boot_db_first_time.sh
+dos2unix mysql-faster-imports.sh
 
