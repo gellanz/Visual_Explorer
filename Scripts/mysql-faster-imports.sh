@@ -5,7 +5,7 @@
 
 # Based on https://dba.stackexchange.com/questions/83125/mysql-any-way-to-import-a-huge-32-gb-sql-dump-faster/83385#83385
 
-mysqlStateFile="/prueba/mysql.optimized.for.exports"
+mysqlStateFile="/sql/mysql.optimized.for.exports"
 mysqlConfigLocation="/etc/mysql/my.cnf" # <-- change to the correct for your system, should be for global mysql settings
 
 function mysqlOptimizeForImports {
