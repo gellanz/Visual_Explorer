@@ -25,7 +25,7 @@ debconf-set-selections <<< 'mysql-server mysql-server/root_password password roo
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
 
 
-# Installing packages
+# Installing MySQL packages
 apt-get install -y mysql-server mysql-client
 
 # Allow External Connections on your MySQL Service
@@ -34,11 +34,24 @@ sudo sed -i -e 's/skip-external-locking/#skip-external-locking/g' /etc/mysql/mys
 mysql -u root -proot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root'; FLUSH privileges;"
 sudo service mysql restart
 
-echo -e "Si es la primera vez que se construirá la base de datos o si la máquina virtual
-         se destruyó, se tienen que ejecutar los siguientes comandos: \n
-         cd /scripts \n ./boot_db_first_time.sh"
-
+# Making executable the scripts
 cd /scripts
 dos2unix boot_db_first_time.sh
 dos2unix mysql-faster-imports.sh
+dos2unix start_ELK.sh
 
+# echo -e "Si es la primera vez que se construirá la base de datos o si la máquina virtual
+#          se destruyó, se tienen que ejecutar los siguientes comandos: \n
+#          cd /scripts \n ./boot_db_first_time.sh"
+
+# Installing Docker 
+sudo apt-get install -y docker.io
+sudo apt-get install -y docker-compose
+grep vm.max_map_count /etc/sysctl.conf
+sudo sysctl -w vm.max_map_count=262144
+
+# Retrieving docker images
+cd /docker
+sudo docker-compose up
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
