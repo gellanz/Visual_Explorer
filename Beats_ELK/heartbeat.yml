@@ -29,9 +29,11 @@ heartbeat.monitors:
   # Human readable display name for this service in Uptime UI and elsewhere
   name: My Monitor
   # List or urls to query
-  urls: ["http://localhost:9200", "http://localhost:5601", "http://localhost:8080/News"]
+  # urls: ["http://localhost:9200", "http://localhost:5601", "http://localhost:8080/News"]
+  urls: ["http://148.204.66.112:9200", "http://148.204.66.112:5601", "http://148.204.66.112:8080/News"]
+
   # Configure task schedule
-  schedule: '@every 300s'
+  schedule: '@every 200s'
   # Total test connection and data exchange timeout
   #timeout: 16s
   # Name of corresponding APM service, if Elastic APM is in use for the monitored service.
