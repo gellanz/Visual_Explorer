@@ -35,10 +35,14 @@ mysql -u root -proot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY
 sudo service mysql restart
 
 # Making executable the scripts
-cd /scripts
-dos2unix boot_db_first_time.sh
-dos2unix mysql-faster-imports.sh
-dos2unix start_ELK.sh
+# cd /scripts
+# dos2unix boot_db_first_time.sh
+# dos2unix mysql-faster-imports.sh
+# dos2unix start_ELK.sh
+
+for file in /scripts; do dos2unix $FILE; done
+for file in /beats_elk; do dos2unix $FILE; done
+for file in /docker; do dos2unix $FILE; done
 
 # echo -e "Si es la primera vez que se construirá la base de datos o si la máquina virtual
 #          se destruyó, se tienen que ejecutar los siguientes comandos: \n
@@ -55,3 +59,18 @@ cd /docker
 sudo docker-compose up
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
+
+# Installing and configuring Metricbeam
+curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.13.2-amd64.deb
+sudo dpkg -i metricbeat-7.13.2-amd64.deb
+sudo metricbeat modules enable logstash
+sudo metricbeat setup
+sudo service metricbeat start
+
+# Installing and configuring Heartbeat
+curl -L -O https://artifacts.elastic.co/downloads/beats/heartbeat/heartbeat-7.13.2-amd64.deb
+sudo dpkg -i heartbeat-7.13.2-amd64.deb
+sudo cp /beats_elk/heartbeat.yml /etc/heartbeat/
+heartbeat setup -e
+sudo service heartbeat-elastic start
+
