@@ -35,14 +35,9 @@ mysql -u root -proot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY
 sudo service mysql restart
 
 # Making executable the scripts
-# cd /scripts
-# dos2unix boot_db_first_time.sh
-# dos2unix mysql-faster-imports.sh
-# dos2unix start_ELK.sh
-
-for file in /scripts; do dos2unix $FILE; done
-for file in /beats_elk; do dos2unix $FILE; done
-for file in /docker; do dos2unix $FILE; done
+for file in "/scripts/*"; do dos2unix $file; done
+for file in "/beats_elk/*"; do dos2unix $file; done
+for file in "/docker/*"; do dos2unix $file; done
 
 # echo -e "Si es la primera vez que se construirá la base de datos o si la máquina virtual
 #          se destruyó, se tienen que ejecutar los siguientes comandos: \n
