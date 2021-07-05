@@ -49,12 +49,6 @@ sudo apt-get install -y docker-compose
 grep vm.max_map_count /etc/sysctl.conf
 sudo sysctl -w vm.max_map_count=262144
 
-# Retrieving docker images
-cd /docker
-sudo docker-compose up
-sudo systemctl enable docker.service
-sudo systemctl enable containerd.service
-
 # Installing and configuring Metricbeam
 curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.13.2-amd64.deb
 sudo dpkg -i metricbeat-7.13.2-amd64.deb
@@ -69,3 +63,8 @@ sudo cp /beats_elk/heartbeat.yml /etc/heartbeat/
 heartbeat setup -e
 sudo service heartbeat-elastic start
 
+# Retrieving docker images
+cd /docker
+sudo docker-compose up
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
