@@ -31,6 +31,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "../SQL", "/sql", id: "mysql"
   config.vm.synced_folder "../Scripts", "/scripts", id: "scripts"
   config.vm.synced_folder "../Docker", "/docker", id: "docker"
+  config.vm.synced_folder "../Beats_ELK", "/beats_elk", id: "beats"
 
   config.trigger.before :halt do |trigger|
     trigger.name = "Stoping ELK"
