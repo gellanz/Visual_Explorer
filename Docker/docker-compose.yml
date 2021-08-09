@@ -49,7 +49,7 @@ services:
 
   heartbeat:
     image: docker.elastic.co/beats/heartbeat:7.13.2
-    container_name: heartsbeat    
+    container_name: heartbeat    
     environment:
       ELASTICSEARCH_HOSTS: http://elasticsearch:9200
     volumes:
