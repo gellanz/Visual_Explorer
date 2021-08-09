@@ -1,5 +1,7 @@
 Vagrant/.vagrant
 /Vagrant/ubuntu-bionic-18.04-cloudimg-console.log
-SQL
+/SQL/**
 Data.rar
 cic.txt
+Docker/heartbeat-7.13.2-amd64.deb
+Docker/metricbeat-7.13.2-amd64.deb
