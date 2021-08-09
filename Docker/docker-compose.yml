@@ -37,6 +37,7 @@ services:
 
   metricbeat:
     image: docker.elastic.co/beats/metricbeat:7.13.2
+    container_name: metricbeat
     environment:
       ELASTICSEARCH_HOSTS: http://elasticsearch:9200
     volumes:
@@ -48,6 +49,7 @@ services:
 
   heartbeat:
     image: docker.elastic.co/beats/heartbeat:7.13.2
+    container_name: heartsbeat    
     environment:
       ELASTICSEARCH_HOSTS: http://elasticsearch:9200
     volumes:
