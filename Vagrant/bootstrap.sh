@@ -46,25 +46,28 @@ for file in "/docker/*"; do dos2unix $file; done
 # Installing Docker 
 sudo apt-get install -y docker.io
 sudo apt-get install -y docker-compose
+export DOCKER_CLIENT_TIMEOUT=120
+export COMPOSE_HTTP_TIMEOUT=120
 grep vm.max_map_count /etc/sysctl.conf
 sudo sysctl -w vm.max_map_count=262144
 
 # Installing and configuring Metricbeam
-curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.13.2-amd64.deb
-sudo dpkg -i metricbeat-7.13.2-amd64.deb
-sudo metricbeat modules enable logstash
-sudo metricbeat setup
-sudo service metricbeat start
+# curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.13.2-amd64.deb
+# sudo dpkg -i metricbeat-7.13.2-amd64.deb
+# sudo metricbeat modules enable logstash
+# sudo metricbeat setup
+# sudo service metricbeat start
 
 # Installing and configuring Heartbeat
-curl -L -O https://artifacts.elastic.co/downloads/beats/heartbeat/heartbeat-7.13.2-amd64.deb
-sudo dpkg -i heartbeat-7.13.2-amd64.deb
-sudo cp /beats_elk/heartbeat.yml /etc/heartbeat/
-heartbeat setup -e
-sudo service heartbeat-elastic start
+# curl -L -O https://artifacts.elastic.co/downloads/beats/heartbeat/heartbeat-7.13.2-amd64.deb
+# sudo dpkg -i heartbeat-7.13.2-amd64.deb
+# sudo cp /beats_elk/heartbeat.yml /etc/heartbeat/
+# heartbeat setup -e
+# sudo service heartbeat-elastic start
 
 # Retrieving docker images
 cd /docker
 sudo docker-compose up
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
+
