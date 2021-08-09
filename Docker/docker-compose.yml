@@ -20,6 +20,8 @@ services:
       - esdata1:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
+    networks:
+      - es-network
 
   kibana:
     image: docker.elastic.co/kibana/kibana:7.13.2
@@ -28,9 +30,43 @@ services:
       ELASTICSEARCH_URL: "http://elasticsearch:9200"
     ports:
       - 5601:5601
+    networks:
+      - es-network
+    depends_on:
+      - elasticsearch
+
+  metricbeat:
+    image: docker.elastic.co/beats/metricbeat:7.13.2
+    container_name: metricbeat
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+    volumes:
+      - mbdata1:/usr/share/metricbeat/data
+    networks:
+      - es-network
+    depends_on:
+      - elasticsearch
+
+  heartbeat:
+    image: docker.elastic.co/beats/heartbeat:7.13.2
+    container_name: heartsbeat    
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+    volumes:
+      - hbdata1:/usr/share/heartbeat/data
+    networks:
+      - es-network
     depends_on:
       - elasticsearch
 
 volumes:
   esdata1:
     driver: local
+  mbdata1:
+    driver: local
+  hbdata1:
+    driver: local
+
+networks:
+  es-network:
+    driver: bridge
