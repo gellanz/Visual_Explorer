@@ -66,6 +66,7 @@ sudo sysctl -w vm.max_map_count=262144
 # sudo service heartbeat-elastic start
 
 # Retrieving docker images
+sudo cp /beats_elk/metricbeat.yml /usr/share/metricbeat
 cd /docker
 sudo docker-compose up
 sudo systemctl enable docker.service
