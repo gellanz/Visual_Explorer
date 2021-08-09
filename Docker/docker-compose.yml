@@ -31,6 +31,19 @@ services:
     depends_on:
       - elasticsearch
 
+  metricbeat:
+    image: docker.elastic.co/beats/metricbeat:7.13.2
+    environment:
+      ELASTICSEARCH_HOSTS: http://localhost:9200
+    volumes:
+      - mbdata1:/usr/share/metricbeat/data
+    depends_on:
+      - elasticsearch
+
 volumes:
   esdata1:
+    driver: local
+  mbdata1:
+    driver: local
+  hbdata1:
     driver: local
