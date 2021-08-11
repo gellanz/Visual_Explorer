@@ -109,7 +109,7 @@ def getEntities(text):
     return data
 
 import MySQLdb #import mysql.connector
-bd = MySQLdb.connect(host="localhost", user="yadira3", passwd="cic", db="document_analyzer")
+bd = MySQLdb.connect(host="localhost", port=2200, user="root", passwd="root", db="document_analyzer")
 
 def getEntitiesFromDB():
 
