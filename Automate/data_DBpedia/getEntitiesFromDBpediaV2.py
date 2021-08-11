@@ -190,10 +190,10 @@ def updatEntities():
 
     #ids = open("/home/yadira/PycharmProjects/Thesis/src/NewsCrawler/idsNews.csv", 'r')
     #idss = ids.readlines()
-    docEntities = open('data/EntitiesType.txt','r')
+    docEntities = open('EntitiesType.txt','r')
     entitiesList = docEntities.readlines()
     docEntities.close()
-    fileLocation = open('data/locations.txt', 'r')
+    fileLocation = open('locations.txt', 'r')
     listLocation = fileLocation.readlines()
     listLocation2=[]
     for i in listLocation:
