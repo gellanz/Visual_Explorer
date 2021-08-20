@@ -20,6 +20,9 @@ a2enmod rewrite
 # Restart Apache
 sudo service apache2 restart
 
+# Binutils for deb package
+sudo apt-get install binutils
+
 # Setting MySQL root user password root/root
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
@@ -42,6 +45,15 @@ for file in "/docker/*"; do dos2unix $file; done
 # echo -e "Si es la primera vez que se construirá la base de datos o si la máquina virtual
 #          se destruyó, se tienen que ejecutar los siguientes comandos: \n
 #          cd /scripts \n ./boot_db_first_time.sh"
+
+#Installing freeling
+wget https://github.com/TALP-UPC/FreeLing/releases/download/4.2/freeling-4.2-bionic-amd64.deb
+ar x freeling-4.2-bionic-amd64.deb
+tar xvf control.tar.xz
+tar data.tar.xz
+rm -i freeling-4.2-bionic-amd64.deb xvf control.tar.xz data.tar.xz
+
+
 
 # Installing Docker 
 sudo apt-get install -y docker.io
