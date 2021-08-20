@@ -21,7 +21,7 @@ a2enmod rewrite
 sudo service apache2 restart
 
 # Binutils for deb package
-sudo apt-get install binutils
+sudo apt-get -y install binutils
 
 # Setting MySQL root user password root/root
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
@@ -47,13 +47,15 @@ for file in "/docker/*"; do dos2unix $file; done
 #          cd /scripts \n ./boot_db_first_time.sh"
 
 #Installing freeling
+cd /
 wget https://github.com/TALP-UPC/FreeLing/releases/download/4.2/freeling-4.2-bionic-amd64.deb
-ar x freeling-4.2-bionic-amd64.deb
-tar xvf control.tar.xz
-tar data.tar.xz
+sudo ar x freeling-4.2-bionic-amd64.deb
+sudo tar xvf control.tar.xz
+sudo tar xvf data.tar.xz
 rm -i freeling-4.2-bionic-amd64.deb xvf control.tar.xz data.tar.xz
+cd
 
-
+# Compilarlo, hacer carpeta build, poner los compilados, compilar la API de Python
 
 # Installing Docker 
 sudo apt-get install -y docker.io
