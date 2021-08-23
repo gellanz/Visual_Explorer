@@ -46,13 +46,15 @@ for file in "/docker/*"; do dos2unix $file; done
 #          se destruyó, se tienen que ejecutar los siguientes comandos: \n
 #          cd /scripts \n ./boot_db_first_time.sh"
 
-#Installing freeling
+#Installing freeling and its dependencies
 cd /
 wget https://github.com/TALP-UPC/FreeLing/releases/download/4.2/freeling-4.2-bionic-amd64.deb
+sudo apt-get install -y libboost-all-dev
 sudo ar x freeling-4.2-bionic-amd64.deb
 sudo tar xvf control.tar.xz
 sudo tar xvf data.tar.xz
 rm -i freeling-4.2-bionic-amd64.deb xvf control.tar.xz data.tar.xz
+export FREELINGDIR=/usr
 cd
 
 # Compilarlo, hacer carpeta build, poner los compilados, compilar la API de Python
