@@ -58,7 +58,7 @@ lang = "en"
 if len(sys.argv)>1 : lang=sys.argv[1]
 
 # get installation path to use from arg2, or use /usr/local if not provided
-ipath = "~/usr";
+ipath = "/usr";
 if len(sys.argv)>2 : ipath=sys.argv[2]
 
 # path to language data   
