@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 9200, host: 9200, auto_correct:"true"
   # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
   # config.vm.network "private_network", ip: "192.168.33.10"
-  config.vm.network "public_network", ip:"148.204.66.112"
+  # config.vm.network "public_network", ip:"148.204.66.112"
 
   # Provision Settings
   config.vm.provision "shell", path: "bootstrap.sh"
@@ -33,6 +33,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "../Scripts", "/scripts", id: "scripts"
   config.vm.synced_folder "../Docker", "/docker", id: "docker"
   config.vm.synced_folder "../Beats_ELK", "/beats_elk", id: "beats"
+  config.vm.synced_folder "../Automate", "/automate", id: "auto"
 
   config.trigger.before :halt do |trigger|
     trigger.name = "Stoping ELK"
