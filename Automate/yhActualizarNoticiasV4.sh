@@ -39,14 +39,17 @@ do
       # Actualizar las entidades nombradas
       echo ""
       echo Inicia la actualización de Entidades Nombradas
-      cd /home/yadira/PycharmProjects/Thesis/src/NewsCrawler/
-      python3 '/home/yadira/PycharmProjects/Thesis/src/NewsCrawler/getEntitiesFromDBpediaV2.py'
+      # cd /home/yadira/PycharmProjects/Thesis/src/NewsCrawler/
+      cd automate/data_DBpedia
+      # python3 '/home/yadira/PycharmProjects/Thesis/src/NewsCrawler/getEntitiesFromDBpediaV2.py'
+      python3 getEntitiesFromDBpediaV2.py
       echo Se ejecuto la actualización de Entidades Nombradas
 
       # Cargar las noticias de stage a las tablas CORE, Doc: “ETL ST_DA_DOCUMENT_NEWS”
       echo ""
       echo Inicia “ETL ST_DA_DOCUMENT_NEWS”
-      cd /home/yadira/Documents/Automatizar/ST_DA_DOCUMENT_NEWS_V3/
+      # cd /home/yadira/Documents/Automatizar/ST_DA_DOCUMENT_NEWS_V3/
+      cd automate/stage_to_core
       ./ST_DA_DOCUMENT_NEWS_V3_run.sh
       echo Se ejecuto “ETL ST_DA_DOCUMENT_NEWS”
 
