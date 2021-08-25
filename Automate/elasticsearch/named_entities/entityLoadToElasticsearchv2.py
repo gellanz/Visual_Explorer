@@ -3,8 +3,9 @@ import MySQLdb
 import pandas as pd
 
 daConexion = MySQLdb.connect(host="localhost",
-                             user="yadira",
-                             passwd="cic",
+                             port=2200,
+                             user="root",
+                             passwd="root",
                              db="document_analyzer")
 
 
@@ -33,7 +34,7 @@ daConexion.close()
 document = {}
 
 listPrevDocument = []
-with open('/home/yadira/PycharmProjects/Thesis/src/load_entities.txt', 'r') as prevDocument:
+with open('load_entities.txt', 'r') as prevDocument:
     listPrevDocument = [linea.strip() for linea in prevDocument]
 
 #print("Documentos cargados anteriormente:")
