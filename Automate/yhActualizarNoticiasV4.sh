@@ -32,7 +32,9 @@ do
       echo El valor de la variable SQL_STATEMENT es $SQL_STATEMENT
 
       # Actualizar la fecha de carga
-      mysql -h localhost -u yadira3 -pcic document_analyzer -e "$SQL_STATEMENT"
+      # mysql -h localhost -u yadira3 -pcic document_analyzer -e "$SQL_STATEMENT"
+      # credenciales para la bd dentro de la máquina virtual
+      mysql -u root -proot document_analyzer -e "$SQL_STATEMENT"
 
       echo Se ejecuto la actualizacion de la fecha de carga
 
@@ -40,7 +42,7 @@ do
       echo ""
       echo Inicia la actualización de Entidades Nombradas
       # cd /home/yadira/PycharmProjects/Thesis/src/NewsCrawler/
-      cd automate/data_DBpedia
+      cd /automate/data_DBpedia
       # python3 '/home/yadira/PycharmProjects/Thesis/src/NewsCrawler/getEntitiesFromDBpediaV2.py'
       python3 getEntitiesFromDBpediaV2.py
       echo Se ejecuto la actualización de Entidades Nombradas
@@ -49,15 +51,17 @@ do
       echo ""
       echo Inicia “ETL ST_DA_DOCUMENT_NEWS”
       # cd /home/yadira/Documents/Automatizar/ST_DA_DOCUMENT_NEWS_V3/
-      cd automate/stage_to_core
+      cd /automate/stage_to_core
       ./ST_DA_DOCUMENT_NEWS_V3_run.sh
       echo Se ejecuto “ETL ST_DA_DOCUMENT_NEWS”
 
       # Generar vectores y cargarlos en DOCUMENT_VSM
       echo ""
       echo Inicia la generación de vectores
-      cd /home/yadira/PycharmProjects/Thesis/src/
-      python3 '/home/yadira/PycharmProjects/Thesis/src/newsAnalysisV4.py'
+      # cd /home/yadira/PycharmProjects/Thesis/src/
+      cd /automate/freeling 
+      # python3 '/home/yadira/PycharmProjects/Thesis/src/newsAnalysisV4.py'
+      python3 newsAnalysisV4.py
       echo Se ejecuto la generación de vectores
 
       # Homologar sinónimos
@@ -65,13 +69,16 @@ do
       echo Inicia la homologación de sinónimos
       SQL_HOMOLOGAR="UPDATE document_analyzer.DOCUMENT_VSM_2020A INNER JOIN document_analyzer.SYNONYM ON DOCUMENT_VSM_2020A.CHARACTERISTIC = SYNONYM.SYNONYM SET DOCUMENT_VSM_2020A.SIMPLE_CHARACTERISTIC = SYNONYM.WORD WHERE SYNONYM.ACTIVE = 1 ;" 
       echo El valor de la variable SQL_HOMOLOGAR es $SQL_HOMOLOGAR
-      mysql -h localhost -u yadira3 -pcic document_analyzer -e "$SQL_HOMOLOGAR"
+      # mysql -h localhost -u yadira3 -pcic document_analyzer -e "$SQL_HOMOLOGAR"
+      # credenciales para la bd dentro de la máquina virtual
+      mysql -u root -proot document_analyzer -e "$SQL_HOMOLOGAR"
       echo Se ejecuto la homologación de sinónimos
      
       # Indexar las noticias
       echo ""
+      cd /automate/elasticsearch/index_news
       echo Inicia la indexación de noticias
-      python3 '/home/yadira/PycharmProjects/Thesis/src/loadToElasticsearch v2.py'
+      python3 loadToElasticsearchv2.py
       echo Se ejecuto la indexación de noticias
 
       # Indexar las Entidades Nombradas 
@@ -79,14 +86,20 @@ do
       echo Inicia la indexación de Entidades Nombradas
       SQL_UPD_INT_IDS="UPDATE INFO_TRACING SET ORIGINAL_ID_INT = CAST(ORIGINAL_ID AS UNSIGNED) ;"
       echo El valor de la variable SQL_UPD_INT_IDS es $SQL_UPD_INT_IDS
-      mysql -h localhost -u yadira3 -pcic document_analyzer -e "$SQL_UPD_INT_IDS"
-      python3 '/home/yadira/PycharmProjects/Thesis/src/entityLoadToElasticsearch v2.py'
+      # mysql -h localhost -u yadira3 -pcic document_analyzer -e "$SQL_UPD_INT_IDS"
+      # credenciales para la bd dentro de la máquina virtual
+      mysql -u root -proot document_analyzer -e "$SQL_UPD_INT_IDS"
+      # python3 '/home/yadira/PycharmProjects/Thesis/src/entityLoadToElasticsearch v2.py'
+      cd /automate/elasticsearch/named_entities
+      python3 entityLoadToElasticsearchv2.py
       echo Se ejecuto la indexación de Entidades Nombradas
 
       # Cargar la categoría MLP
       echo ""
       echo Inicia la carga de la categoría MLP
-      python3 '/home/yadira/PycharmProjects/Thesis/src/ClasificarNoticias/LoadCategoriaMLPElasticsearchV3.py'
+      # python3 '/home/yadira/PycharmProjects/Thesis/src/ClasificarNoticias/LoadCategoriaMLPElasticsearchV3.py'
+      cd /automate/elasticsearch/mlp_category
+      python3 LoadCategoriaMLPElasticsearchV3.py
       echo Se ejecuto la carga de la categoría MLP
 
       echo "All commands were executed."
