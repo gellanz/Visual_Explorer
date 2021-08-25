@@ -6,8 +6,9 @@ import pandas as pd
 
 
 daConexion = MySQLdb.connect(host="localhost",
-                             user="yadira",
-                             passwd="cic",
+                             port=2200,
+                             user="root",
+                             passwd="root",
                              db="document_analyzer")
 
 cursor = daConexion.cursor()
