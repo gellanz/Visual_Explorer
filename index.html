@@ -1,0 +1,972 @@
+﻿<!DOCTYPE html>
+<html>
+<title>Laboratorio de Ciencia de Datos y Tecnología del Software</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/w3.css">
+<link rel="stylesheet" href="./css/w3-theme-black.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="shortcut icon" sizes="196x196" href="./img/cic.jpg">
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/navbarcrimes.css" />
+
+    <link href="./css/raleway.css" rel="stylesheet">
+    <link href="./css/reem.css" rel="stylesheet">
+
+    <link href="./css/josefina.css" rel="stylesheet">
+
+    <script src="./scripts/js/jquery-1.9.1.min.js"></script>
+
+<style type="text/css">
+
+.divsistemas{
+	height: 600px;
+}
+
+.navbar-brand{
+	font-size:38px;
+}
+
+.with-nav-tabs.panel-info .nav-tabs > li.dropdown .dropdown-menu {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+.with-nav-tabs.panel-info .nav-tabs > li.dropdown .dropdown-menu > li > a {
+    color: #31708f;
+}
+.with-nav-tabs.panel-info .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+.with-nav-tabs.panel-info .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+    background-color: #bce8f1;
+}
+.with-nav-tabs.panel-info .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+.with-nav-tabs.panel-info .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+.with-nav-tabs.panel-info .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-color: #31708f;
+}
+
+.dropdown-menu>li>a {
+    color: #f6f3f7;
+}
+
+.dropdown-menu {
+    background-color: #43a7d7;
+}
+
+
+  .headimg {
+-webkit-filter: brightness(100%);
+}
+
+    body {
+    font-family: 'Josefin Sans', sans-serif; /*font-family: 'Raleway' 'Reem Kufi', sans-serif*/;
+    overflow-x: hidden;
+    font-size: 18px;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+      font-family: 'Josefin Sans', sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .w3-theme-l5 {
+    color: #000 !important;
+    background-color: #b5b5b5 !important;
+}
+
+.msglab {
+    text-align: justify;
+    -moz-text-align-last: right; /* Code for Firefox */
+    text-align-last: right;
+}
+
+.fa {
+    color: rgb(207, 181, 59)!important;
+}
+
+
+.w3-animate-left {
+    color: #fff!important;
+    background-color: rgba(1, 28, 50, 0.9)!important;
+}
+
+.w3-sidenav a:hover {
+    background-color: #cfb53b;
+}
+
+
+.w3-teal {
+    color: #fff!important;
+    background-color: #E91E63!important;
+}
+
+.w3-hover-teal:hover {
+    color: #fff!important;
+    background-color: rgb(207,181,59)!important;
+}
+
+.cont{
+    color: #fff!important;
+}
+
+.dire{
+  background-color: #cfb53b!important;
+}
+
+.circlens{
+    background-color: #fff!important;
+}
+
+.face{
+    color: #3b5998!important;
+}
+.twi{
+    color: #1da1f2!important;
+}
+
+.goo{
+    color: rgb(219, 68, 55)!important;
+}
+
+@media (max-width: 480px){
+
+.headimg {
+    width: 100%;
+    height: 300px;
+    min-height: 1px;
+    max-height: 600px;
+}
+}
+@media (min-width: 480px) {
+  .headimg{
+        width:100%;
+        min-height:350px;
+        max-height:600px;
+    }
+
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 7px 15px;
+    font-size: 38px;
+    line-height: 20px;
+}
+
+
+.iconLogo{
+	color:#fff!important;
+}
+
+.w3-third {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 800px){
+	.divsistemas {
+		height: 750px;
+	}
+
+}
+@media (max-width: 650px){
+	.divsistemas {
+		height: 650px;
+	}
+
+}
+
+@media (max-width: 480px){
+	.divsistemas {
+		height: 570px;
+	}
+
+}
+
+.bs-example {
+    margin-bottom: 10px;
+}
+
+.verde {
+    background-color: #238905;
+}
+
+.blanco{
+	background-color: #fff;
+	color:#000;
+}
+
+.rojo {
+    background-color: #e62008;
+}
+
+</style>
+<body id="myPage">
+
+<!-- Side Navigation on click -->
+<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none;z-index:2" id="mySidenav">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-xxxlarge w3-text-teal">Cerrar
+    <i class="fa fa-remove cont"></i>
+  </a>
+  <a href="#top">Conoce el CIC</a>
+  <a href="#team">Nuestro Equipo</a>
+  <a href="#lab">Nuestro Laboratorio</a>
+  <a href="#contactanos">Contactanos</a>
+  <a href="#ubicacion">Ubicación</a>
+</nav>
+
+<nav class="navbar1 navbar-fixed-top navbar-default1" role="navigation" color="white">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <div class="starter-content">
+
+              <a class="navbar-brand" href="./index.html"><i class="fa fa-database iconLogo" aria-hidden="true"></i> <i class="fa fa-flask iconLogo" aria-hidden="true"></i> LCDyTS</a>
+              <!-- <a href="walkthrough.html" class="btn transparent">Discover now</a> -->
+            </div>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#team">Nuestro Equipo</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#lab">Nuestro Laboratorio</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contactanos">Contactanos</a>
+                    </li>
+
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity" id="top">
+  <img src="./img/cdyts.jpg" class="headimg" alt="boat">
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">
+    <button onclick="window.location='http://www.cic.ipn.mx'"
+    eje="document.getElementById('id01').style.display='block'" class="w3-btn w3-xlarge w3-theme w3-hover-teal" title="IR AL SITIO DEL CIC">CONOCE MAS DEL CIC</button>
+  </div>
+</div>
+<div class="w3-container" style="position:relative">
+  <a onclick="w3_open()" class="w3-btn-floating-large w3-teal" style="position:absolute;top:-28px;right:10px;z-index:0;">
+  <i class="fa fa-plus"></i></a>
+</div>
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-8 w3-animate-top">
+    <header class="w3-container w3-teal">
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn"><i class="fa fa-remove"></i></span>
+      <h4>Oh snap! We just showed you a modal..</h4>
+      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+    </header>
+    <div class="w3-container">
+      <p>Cool huh? Ok, enough teasing around..</p>
+      <p>Go to our <a class="w3-btn" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p>Modal footer</p>
+    </footer>
+  </div>
+</div>
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="pys">
+<div class="w3-col">
+<h1 align="center"><a href = "./seminario_Ene_Junio_2020.docx">Seminario Enero Febrero 2021</a></h1>
+<br>
+<br>
+<h1 align="center">Algunos Proyectos</h1>
+<h3 align="center">Laboratorio de Ciencia de Datos y Tecnología de Software / CDyTS</h3>
+<p class="" align="center">
+	Proyectos que actualmente se desarrollan en el laboratorio.
+</p>
+</div>
+
+<div class="w3-third">
+<div class="w3-card-2 w3-white divsistemas">
+  <img src="./img/feur3.jpg" alt="Sistema de Delitos" style="width:100%">
+  <div class="w3-container" align="center">
+  <h3>SISTEMA DE ANÁLISIS DE FENOMENOS URBANOS</h3>
+  <h4><i class="fa fa-globe" aria-hidden="true"><a href="../../sispredel/" style="color:#cfb53b"> visitar Sitio</a></i></h4>
+  <h4><i class="fa fa-youtube-play" aria-hidden="true"><a href="https://youtu.be/54cWt8o9i1g" style="color:#cfb53b"> Ver Video</a></i></h4>
+  <br><br><br><br><br><br><br>
+  </div>
+  </div>
+</div>
+
+<div class="w3-third">
+<div class="w3-card-2 w3-white divsistemas">
+  <img src="./img/ancone4.jpg" alt="Sistema EXCALE" style="width:100%">
+  <div class="w3-container" align="center">
+  <h3>SISTEMA DE ANÁLISIS DE CONTEXTO EN EVALUACIONES</h3>
+  <h4><i class="fa fa-globe" aria-hidden="true"><a href="http://148.204.64.166/ancone/" style="color:#cfb53b"> visitar Sitio</a></i></h4>
+  <h4><i class="fa fa-youtube-play" aria-hidden="true"><a href="https://www.youtube.com/watch?v=DUC4WXbhtCk" style="color:#cfb53b"> Ver Video</a></i></h4>
+  <br>
+  <p style="font-weight: bold;">Ingresar con los siguientes datos:</p>
+  <p style="font-weight: bold;" >Usuario: invitado</p>
+  <p style="font-weight: bold;">Contraseña: invitado</p>
+  <br>
+  </div>
+  </div>
+</div>
+
+<div class="w3-third">
+<div class="w3-card-2 w3-white divsistemas">
+  <img src="./img/ecobici.jpg" alt="Sistema de análisis histórico de movilidad en Ecobici" style="width:100%">
+  <div class="w3-container" align="center">
+  <h3>SISTEMA DE ANÁLISIS DE MOVILIDAD ECOBICI</h3>
+  <h4><i class="fa fa-globe" aria-hidden="true"><a href="http://148.204.66.79/neoecobiciweb/" style="color:#cfb53b" target= "_blank">Movilidad en estaciones</a></i></h4>
+  <h4><i class="fa fa-globe" aria-hidden="true"><a href="http://148.204.64.166:8088/lcdyts/views/main/login.zul" style="color:#cfb53b" target= "_blank"> Sitio SAM</a></i></h4>
+  <h4><i class="fa fa-globe" aria-hidden="true"><a href="http://sites.google.com/view/sahmi/" style="color:#cfb53b" target= "_blank"> Sitio SAM2 -Prueba</a></i></h4>
+  <h4><i class="fa fa-youtube-play" aria-hidden="true"><a href="https://www.youtube.com/watch?v=tInl49C_bgU" style="color:#cfb53b"> Ver Video</a></i></h4>
+  <br>
+  <p style="font-weight: bold;">Ingresar con los siguientes datos:</p>
+  <p style="font-weight: bold;" >Usuario: invitado</p>
+  <p style="font-weight: bold;">Contraseña: invitado</p>
+  <br>
+  </div>
+  </div>
+</div>
+
+<div class="w3-third">
+<div class="w3-card-2 w3-white divsistemas">
+		  <img src="./img/angelesverdes.jpg" alt="Sistema de Noticias" style="width:100%">
+		  <div class="w3-container" align="center">
+		  <h3>SISTEMA DE ANGELES VERDES</h3>
+		  <h4><i class="fa fa-globe" aria-hidden="true"><a href="http://148.204.66.247/tallerkdd/" style="color:#cfb53b"> visitar Sitio</a></i></h4>
+		  <h4><i class="fa fa-youtube-play" aria-hidden="true"><a href="https://youtu.be/LqBpBwUFxh4" style="color:#cfb53b"> Ver Video</a></i></h4>
+		  <br><br><br><br><br><br><br>
+		  </div>
+		  </div>
+
+</div>
+<div class="w3-third">
+		<div class="w3-card-2 w3-white divsistemas">
+		  <img src="./img/savn.png" alt="Sistema de Analisis Masivo de Noticias" style="width:100%">
+		  <div class="w3-container" align="center">
+		  <h3>SISTEMA DE ANÁLISIS VISUAL DE NOTICIAS</h3>
+		  <h4><i class="fa fa-globe" aria-hidden="true"><a href="http://148.204.64.167/News/" style="color:#cfb53b"> visitar Sitio</a></i></h4>
+		  <h4><i class="fa fa-youtube-play" aria-hidden="true"><a href="https://youtu.be/54cWt8o9i1g" style="color:#cfb53b"> Ver Video</a></i></h4>
+		  <br><br><br><br><br><br><br>
+		  </div>
+		  </div>
+
+</div>
+<div class="w3-third">
+  <div class="w3-card-2 w3-white divsistemas">
+		  <img src="./img/SSEH.png" alt="Sistema de Noticias" style="width:100%">
+		  <div class="w3-container" align="center">
+		  <h3>ANÁLISIS HISTÓRICO DE SERVICIOS DE SALUD</h3>
+		  <h4><i class="fa fa-globe" aria-hidden="true"><a href="Servicios/index.html" style="color:#cfb53b"> Visitar Sitio</a></i></h4>
+      <h4><i class="fa fa-globe" aria-hidden="true"><a href="Fenotipado-Digital/index.html" style="color:#cfb53b"> Fenotipado Digital</a></i></h4>
+      <h4><i class="fa fa-globe" aria-hidden="true"><a href="ECNT/index.html" style="color:#cfb53b"> Enfermedades Crónicas No Transmisibles</a></i></h4>
+		  <br><br><br><br><br><br><br>
+		  </div>
+		  </div>
+</div>
+<div class="w3-third">
+  <div class="w3-card-2 w3-white divsistemas">
+    <img src="./img/aluse_image.png" alt="Sistema Ecobici" style="width:100%">
+      <div class="w3-container" align="center">
+        <h3>ALUSE</h3>
+        <h4>
+          <i class="fa fa-globe" aria-hidden="true">
+            <a href="http://148.204.66.69/aluse/" style="color:#cfb53b" target= "_blank"> visitar Sitio</a>
+          </i>
+        </h4>
+        <h4>
+          <i class="fa fa-youtube-play" aria-hidden="true">
+            <a href="#" style="color:#cfb53b"> Ver Video</a>
+          </i>
+        </h4>
+        <br>
+        <br>
+      </div>
+  </div>
+</div>
+</div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team" name="nuestroequipo">
+<h2>NUESTRO EQUIPO</h2>
+<h3>Conocenos: </h3>
+
+<div class="w3-row"><br>
+
+<div class="w3-third">
+  <img src="./img/drgilberto3.jpg" alt="Dr Gilberto" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Dr. Gilberto Lorenzo Martínez Luna</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Dr. en Ciencias de la Computación (CIC)</i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> llunameztli (at) gmail (dot) com</i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> Jefe de Laboratorio CDyTS</i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="http://www.saber.cic.ipn.mx/cake/SABERsvn/trunk/docentes/webView/35" style="color:#cfb53b"> http://www.cic.ipn.mx/</a></i></p>
+  <br>
+</div>
+
+<div class="w3-third">
+  <img src="./img/dradolfo.jpg" alt="Dr Guzman" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Dr. Adolfo Guzmán Arenas</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Dr. en Ciencias de la Computación (MIT)</i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> aguzman (at) ieee (dot) org</i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> IEEE y ACM Fellow</i></p>
+  <p><i class="fa fa-long-arrow-up" aria-hidden="true"> Nivel SNI 3</i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="http://a-guzman.blogspot.mx/" style="color:#cfb53b"> http://a-guzman.blogspot.mx/</a></i></p>
+  <br>
+</div>
+
+<div class="w3-third">
+  <img src="./img/drolivares.jpg" alt="Dr Olivares" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Dr. Jesús Manuel Olivares Ceja</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Dr. en Ciencias de la Computación</i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> jesuso (at) acm (dot) org</i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> Profesor del Laboratorio CDyTS</i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="http://jesusolivares.com/jesus/" style="color:#cfb53b"> http://jesusolivares.com/jesus/</a></i></p>
+  <br>
+</div>
+
+
+</div>
+<div class="w3-row"><br>
+
+<div class="w3-third">
+  <img src="./img/mdinora.jpg" alt="Dra. Dinora" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Dra. Sandra Dinora Orantes Jiménez</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Dra. en Ingeniería de Sistemas</i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> dinora (at) cic (dot) ipn (dot) mx</i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> Profesora del Laboratorio CDyTS</i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="http://www.saber.cic.ipn.mx/cake/SABERsvn/trunk/docentes/webView/37" style="color:#cfb53b"> http://www.cic.ipn.mx/</a></i></p>
+  <br>
+</div>
+<div class="w3-third">
+<img src="./img/drVilchis.jpg" alt="Dr. Vilchis" style="width:45%" class="w3-circle w3-hover-opacity">
+<h3>Dr. Manuel Vilches Blázquez</h3>
+<p><i class="fa fa-book " aria-hidden="true"> Dr. en Ingeniería Geográfica</i></p>
+<p><i class="fa fa-envelope" aria-hidden="true"> lmvilches (at) cic (dot) ipn (dot) mx</i></p>
+<p><i class="fa fa-user" aria-hidden="true"> Profesor del Laboratorio CDyTS</i></p>
+<p><i class="fa fa-globe" aria-hidden="true"><a href="http://www.cic.ipn.mx/" style="color:#cfb53b"> http://www.cic.ipn.mx/</a></i></p>
+<br>
+</div>
+
+<div class="w3-third">
+  <img src="./img/ingarturo.jpg" alt="Ing Arturo" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>M. en C. Arturo Heredia Márquez</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> M. en Ciencias de la Computación</i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> arturoheredia (at) live (dot) com (dot) mx</i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> Estudiante de DCC </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.linkedin.com/in/arturo-heredia-m%C3%A1rquez-7aaa9b112/" style="color:#cfb53b"> https://www.linkedin.com/ </a></i></p>
+  <br>
+</div>
+
+</div>
+
+<div class="w3-row"><br>
+  <div class="w3-third">
+    <img src="./img/yadirahdz.jpg" alt="Ing. Ivonne" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Ing. Estela Yadira Hernández Cruz</h3>
+    <p><i class="fa fa-book " aria-hidden="true"> Ing. en Computación </i></p>
+    <p><i class="fa fa-envelope" aria-hidden="true"> b170443 (at) sagitario (dot) cic (dot) ipn (dot) mx</i></p>
+    <p><i class="fa fa-user" aria-hidden="true"> Estudiante de M.C.C.</i></p>
+    <p><i class="fa fa-globe" aria-hidden="true"><a href="" style="color:#cfb53b"> http://www.cic.ipn.mx/</a></i></p>
+    <br>
+  </div>
+<div class="w3-third">
+  <img src="./img/zottacko.jpg" alt="Ing. Ivonne" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Ing. Alejandro Gutiérrez González</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Ing. en Computación </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> b170443 (at) sagitario (dot) cic (dot) ipn (dot) mx</i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> Estudiante de M.C.C.</i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.linkedin.com/in/alejandro-gutierrez-gonzalez" style="color:#cfb53b"> https://www.linkedin.com/</a></i></p>
+  <br>
+</div>
+<div class="w3-third">
+  <img src="./img/salvador.jpg" alt="Act.-MBA Salvador" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Act-MBA Salvador Barrera Mejía</h3>
+  <p><i class="fa fa-book " aria-hidden="true">Actuario y Maestro en Administración de Negocios</i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> chavobar (at) yahoo (dot) com</i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> Estudiante de M.C.C.</i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="http://www.saber.cic.ipn.mx/cake/SABERsvn/trunk/Alumnos/webAlumno/1386" style="color:#cfb53b"> www.cic.ipn.mx</a></i></p>
+  <br>
+</div>
+</div>
+<div class="w3-row"><br>
+  <div class="w3-third">
+    <img src="./img/MiriamRangel.jpg" alt="Miriam Rangel" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Ing. Miriam Rangel</h3>
+    <p><i class="fa fa-book " aria-hidden="true">  </i></p>
+    <p><i class="fa fa-envelope" aria-hidden="true"> mrangelfdz (at) gmail (dot) com</i></p>
+    <p><i class="fa fa-user" aria-hidden="true"> Estudiante de M.C.C.</i></p>
+    <p><i class="fa fa-globe" aria-hidden="true"><a href="" style="color:#cfb53b"> http://www.cic.ipn.mx/</a></i></p>
+    <br>
+  </div>
+
+
+
+</div>
+
+
+<div class="w3-row"><br>
+</div>
+<div class="w3-row"><br>
+</div>
+
+<h2>SERVICIO SOCIAL</h2>
+<div class="w3-row"><br>
+<div class="w3-third">
+  <img src="./img/Ignacio.png" alt="Lic. Ignacio" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Lic. Ignacio Pablo Orozco Dávila</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Lic. en Ciencias de la Informática</i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> ignaciopabloro2 (at) gmail (dot) com</i></p>
+  <p><i class="fa fa-file-text" aria-hidden="true"> Sistema de Análisis de Movilidad ECOBICI  </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.linkedin.com/in/ignacio-pablo-orozco-d%C3%A1vila-00997315b" style="color:#cfb53b"> Linkedin</a></i></p>
+  <br>
+</div>
+<div class="w3-third">
+  <img src="./img/JoseCarlos.png" alt="Ing. Jose Carlos" style="width:41%" class="w3-circle w3-hover-opacity">
+  <h3>Ing. José Carlos Pintor Salinas</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Ing. en Comunicaciones y Electrónica </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> jpintors1400 (at) alumno (dot) ipn (dot) mx</i></p>
+  <p><i class="fa fa-file-text" aria-hidden="true"> Análisis histórico de Servicios de Salud </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="https://mx.linkedin.com/in/jose-carlos-pintor-salinas-6b4764173" style="color:#cfb53b"> Linkedin</a></i></p>
+  <br>
+</div>
+<div class="w3-third">
+  <img src="./img/AbrahamR.jpg" alt="C. Abraham" style="width:45%;" class="w3-circle w3-hover-opacity">
+  <h3>Ing. Abraham Ramírez Rodríguez</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Ing. en Matemáticas </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> abraham (underscore) 9997 (at) hotmail (dot) com</i></p>
+  <p><i class="fa fa-file-text" aria-hidden="true"> Análisis histórico de Servicios de Salud </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="http://148.204.64.166/lcdyts/Servicios/index.html" style="color:#cfb53b">Servicios de Salud</a></i></p>
+  <br>
+</div>
+</div>
+
+
+<div class="w3-row"><br>
+<div class="w3-third">
+  <img src="./img/MartinN.jpg" alt="Ing. Martín " style="width:45%;" class="w3-circle w3-hover-opacity">
+  <h3>Ing. Martín Alejandro Mata Valencia</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Ing. en Sistemas Computacionales </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> amata (dot) 214 (at) gmail (dot) com</i></p>
+  <p><i class="fa fa-file-text" aria-hidden="true"> Validacion de bases de datos para desarrollar Minería de Datos en Diplomado "Big Data e Internet de las cosas" </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="http://ucad.edu.mx/" style="color:#cfb53b">Universidad de ciencias y administración UCAD</a></i></p>
+  <br>
+</div>
+<div class="w3-third">
+  <img src="./img/JazminBecerra.jpg" alt="Ing. Martín " style="width:45%;" class="w3-circle w3-hover-opacity">
+  <h3>Lic. Jazmín Becerra Dávila</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Lic. en Ciencias de la Informática </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> jazmin.bd@hotmail.com jazmin (dot) bd (at) hotmail (dot) com</i></p>
+  <p><i class="fa fa-file-text" aria-hidden="true"> </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="" style="color:#cfb53b">Instituto Leonardo Bravo</a></i></p>
+  <br>
+</div>
+<div class="w3-third">
+  <img src="./img/NestorOsiel.jpg" alt="Ing. Martín " style="width:45%;" class="w3-circle w3-hover-opacity">
+  <h3>Ing. Nestor Osiel Zavaleta</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Ing. Geofísica </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> neszb_98 (at) hotmail (dot) com</i></p>
+  <p><i class="fa fa-file-text" aria-hidden="true"> </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.linkedin.com/in/nestor-osiel-zavaleta-barrales-679a06169/" style="color:#cfb53b">Escuela Superior de Ingeniería y Arquitectura ESIA </a></i></p>
+  <br>
+</div>
+</div>
+
+<div class="w3-row"><br>
+  <div class="w3-third">
+    <img src="./img/FernandoVillanueva.jpg" alt="Lic. Fernando " style="width:45%;" class="w3-circle w3-hover-opacity">
+    <h3>Lic. Fernando Villanueva</h3>
+    <p><i class="fa fa-book " aria-hidden="true"> Lic. en Ciencias de la Informática</i></p>
+    <p><i class="fa fa-envelope" aria-hidden="true"> ftv81 (at) outlook (dot) com</i></p>
+    <p><i class="fa fa-file-text" aria-hidden="true"> </i></p>
+    <p><i class="fa fa-globe" aria-hidden="true"><a href="http://ucad.edu.mx/" style="color:#cfb53b">Unidad Profesional Interdisciplinaria de Ingeniería Ciencias Sociales y Administrativas </a></i></p>
+    <br>
+  </div>
+  <div class="w3-third">
+    <img src="./img/Elizarraras.jpg" alt="Ing. Gustavo " style="width:45%;" class="w3-circle w3-hover-opacity">
+    <h3>Ing. Gustavo Elizarraras</h3>
+    <p><i class="fa fa-book " aria-hidden="true"> Ing. Mecatrónico</i></p>
+    <p><i class="fa fa-envelope" aria-hidden="true"> angelizarrarasg@gmail.com</i></p>
+    <p><i class="fa fa-file-text" aria-hidden="true">Recuperación parcial del Visual Explorer</i></p>
+    <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.upiita.ipn.mx/" style="color:#cfb53b">Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas </a></i></p>
+    <br>
+  </div>
+
+  </div>
+
+<h2>PROGRAMA DELFÍN</h2>
+<div class="w3-row"><br>
+<div class="w3-third">
+  <img src="./img/GiselleD1.jpg" alt="Ing. Giselle Joseline" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Ing. Giselle Joseline Romero Calixto</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Ing. en Sistemas Computacionales</i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> romeroc (dot) giselle (at) gmail (dot) com</i></p>
+  <p><i class="fa fa-file-text" aria-hidden="true"> Desarrollo de un área de conocimiento aplicando aprendizaje personalizado con uso de Big Data  </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.ittlahuac.edu.mx/" style="color:#cfb53b">Tecnologico Nacional de México</a></i></p>
+  <br>
+</div>
+<div class="w3-third">
+  <img src="./img/AngelD1.jpg" alt="Téc. Jose Angel" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Téc. Jose Angel Eduardo García de Arcos</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Técnico en Sistemas Digitales </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> titanjae15 (at) gmail (dot) com</i></p>
+  <p><i class="fa fa-file-text" aria-hidden="true"> Desarrollo de aplicación móvil para actualización del perfil de usuarios para crowdsourcing </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.cecyt1.ipn.mx/" style="color:#cfb53b"> CEC y T No.1 "González Vázquez Vela"</a></i></p>
+  <br>
+</div>
+<div class="w3-third">
+  <img src="./img/KarolinaD1L.jpg" alt="Téc. Karolina " style="width:45%;" class="w3-circle w3-hover-opacity">
+  <h3>Téc. Karolina Cedillo Sánchez</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Técnico en Computación </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> karolina (dot) cedillo (dot) 05 (at) hotmail (dot) com</i></p>
+  <p><i class="fa fa-file-text" aria-hidden="true"> Desarrollo de sistema de aplicación de exámenes en línea para obtener la ubicación de un usuario en temas de Big Data </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.cecyt8.ipn.mx/" style="color:#cfb53b">CEC y T No.8 "Narciso Bassols García"</a></i></p>
+  <br>
+</div>
+</div>
+
+<div class="w3-row"><br>
+<div class="w3-third">
+  <img src="./img/AnronioD.jpg" alt="Téc. Jorge Antonio " style="width:45%;" class="w3-circle w3-hover-opacity">
+  <h3>Téc. Jorge Antonio Juárez Leyva</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Técnico en Programación </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> androsztk77 (at) gmail (dot) com</i></p>
+  <p><i class="fa fa-file-text" aria-hidden="true"> Desarrollo de "Dashboard" que muestre indicadores de movilidad </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.cecyt9.ipn.mx/" style="color:#cfb53b">CEC y T No.9 "Juan de Dios Bátiz"</a></i></p>
+  <br>
+</div>
+
+<div class="w3-third">
+  <img src="./img/SarahiPerezD.jpg" alt="Ing. Sarahí " style="width:45%;" class="w3-circle w3-hover-opacity">
+  <h3>Ing. Sarahí Peréz Rosas</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Ing. en Tecnlogías de la Información Y Comunicación </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> sara (hyphen) ly (hyphen) s (at) hotmail (dot) com</i></p>
+  <p><i class="fa fa-file-text" aria-hidden="true"> Desarrollo de línea de tiempo con Entidades Nombradas a partir de un conjunto de noticias  </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="http://www.utxicotepec.edu.mx" style="color:#cfb53b">Universidad Tecnológica de Xicotepec de Juárez  </a></i></p>
+  <br>
+</div>
+
+
+<div class="w3-third">
+  <img src="./img/BrandonDG.png" alt="Ing. Brandon " style="width:45%;" class="w3-circle w3-hover-opacity">
+  <h3>Ing. Brandon Alejandro Mosqueda González</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Ing. de Software </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> bmosqueda (at) ucol (dot) mx</i></p>
+  <p><i class="fa fa-file-text" aria-hidden="true"> Análisis de Movilidad en estaciones de ECOBICI y su estatus de disponibilidad </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.ucol.mx/" style="color:#cfb53b">Universidad de Colima </a></i></p>
+  <br>
+</div>
+
+</div>
+
+
+<div class="w3-row"><br>
+<div class="w3-third">
+  <img src="./img/MarcosOmarDG.png" alt="Ing. Marcos Omar " style="width:45%;" class="w3-circle w3-hover-opacity">
+  <h3>Ing. Marcos Omar Martínez Martínez</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Ing. en Tecnologías de la Información y Comunicación </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> ommmtz (at) gmail (dot) com</i></p>
+  <p><i class="fa fa-file-text" aria-hidden="true"> Pre - procesamiento a los datos de Servicios de Salud </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="http://www.utxicotepec.edu.mx/" style="color:#cfb53b">Universidad Tecnológica de Xicotepec de Juárez</a></i></p>
+  <br>
+</div>
+
+</div>
+
+
+<h2>TESISTAS DE LINCENCIATURA</h2>
+<div class="w3-row"><br>
+<div class="w3-third">
+  <img src="./img/EdgarD2.jpg" alt="Ing. Marcos Omar " style="width:45%;" class="w3-circle w3-hover-opacity">
+  <h3>Ing. Edgar Beltrán Alvarado </h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Ing. en Telemática </i></p>
+  <p><i class="fa fa-file-text" aria-hidden="true"> Tésis: Sistema de reconocimiento de patrones de movilidad vial y peatonal para ciudades inteligentes </i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> Asesor de Tésis: Dr. Jesús Manuel Olivares Ceja </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> edgarbeltran97 (at) gmail (dot) com</i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.upiita.ipn.mx/" style="color:#cfb53b">Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas (UPIITA)</a></i></p>
+  <br>
+</div>
+
+</div>
+
+
+<h2>EGRESADOS</h2>
+<div class="w3-row"><br>
+<div class="w3-third">
+  <img src="./img/ingmanuel.jpg" alt="Ing Manuel" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>M. en C. Manuel Gutierrez Ceballos</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> M. en Ciencias de la Computación</i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> manustrok (at) gmail (dot) com</i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.linkedin.com/in/manuel-gutierrez-ceballos-35a61a13b/" style="color:#cfb53b"> FenomenosUrbanos</a></i></p>
+  <br>
+</div>
+<div class="w3-third">
+  <img src="./img/ingcarlos.png" alt="Ing. Carlos" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>M. en C. Carlos Roberto Esquivel Briceño</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> M. en Ciencias de la Computación </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> cresquivel (at) gmail (dot) com</i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="http://www.saber.cic.ipn.mx/cake/SABERsvn/trunk/Alumnos/webAlumno/1257" style="color:#cfb53b"> http://www.cic.ipn.mx/</a></i></p>
+  <br>
+</div>
+
+<div class="w3-third">
+  <img src="./img/ingpedro.jpg" alt="Ing Pedro" style="width:45%;" class="w3-circle w3-hover-opacity">
+  <h3>M. en C. Pedro Ricardo Ortega Castellanos</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> M. en Ciencias de la Computación</i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> ortegapedro901 (at) gmail (dot) com</i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> </i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.facebook.com/profile.php?id=100003285426502" style="color:#cfb53b"> www.facebook.com</a></i></p>
+  <br>
+</div>
+
+</div>
+<div class="w3-row"><br>
+<div class="w3-third">
+  <img src="./img/ingdiana.jpg" alt="Ing. Diana" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>M. EN C. Diana Belem Romero Ruíz</h3>
+  <p><i class="fa fa-book " aria-hidden="true">  M. en Ciencias de la Computación</i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> b151196 (at) sagitario (dot) cic (dot) ipn (dot) mx</i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> Estudiante de M.C.C.</i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="http://www.saber.cic.ipn.mx/cake/SABERsvn/trunk/Alumnos/webAlumno/1313" style="color:#cfb53b"> http://www.cic.ipn.mx/ </a></i></p>
+  <br>
+</div>
+<div class="w3-third">
+  <img src="./img/mmale.jpg" alt="M. María" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>M. en S.I. María Elena Reyes Castellanos</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> Maestra en Sistemas de Información </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> malerece69 (at) gmail (dot) com</i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> Estudiante de M.C.C.</i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="http://www.saber.cic.ipn.mx/cake/SABERsvn/trunk/Alumnos/webAlumno/1400" style="color:#cfb53b"> http://www.cic.ipn.mx/ </a></i></p>
+  <br>
+</div>
+<div class="w3-third">
+  <img src="./img/ingmiguel.jpg" alt="Ing. Miguel" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>M. EN C. Miguel Angel Luna Pérez </h3>
+  <p><i class="fa fa-book " aria-hidden="true">  M. en Ciencias de la Computación </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> miguel_lunap92 (at) hotmail (dot) com</i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> Estudiante de M.C.C.</i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="http://www.saber.cic.ipn.mx/cake/SABERsvn/trunk/Alumnos/webAlumno/1337" style="color:#cfb53b"> http://www.cic.ipn.mx/</a></i></p>
+  <br>
+</div>
+<div class="w3-row"><br>
+<div class="w3-third">
+  <img src="./img/ingivonne.jpg" alt="Ing. Ivonne" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>M. EN C. Thelma Ivonne López Lara</h3>
+  <p><i class="fa fa-book " aria-hidden="true"> M. en Ciencias de la Computación </i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> ivy (dot) lara09 (at) gmail (dot) com</i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> Estudiante de M.C.C.</i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.saber.cic.ipn.mx/cake/SABERsvn/trunk/Alumnos/webAlumno/1336" style="color:#cfb53b"> http://www.cic.ipn.mx/</a></i></p>
+  <br>
+</div>
+<div class="w3-third">
+  <img src="./img/ingnorberto.jpg" alt="Ing. Norberto" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>M. EN C. Norberto García Lavanderos</h3>
+  <p><i class="fa fa-book " aria-hidden="true">M. en Ciencias de la Computación</i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> nogala (at) gmail (dot) com</i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> Estudiante de M.C.C.</i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="https://mx.linkedin.com/in/norberto-garcia-09422b62" style="color:#cfb53b"> https://www.linkedin.com/ </a></i></p>
+  <br>
+</div>
+<div class="w3-third">
+  <img src="./img/angelchipoot.jpg" alt="Ing. Ángel" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>M. EN C. Ángel de Jesús Chi Poot</h3>
+  <p><i class="fa fa-book " aria-hidden="true">M. en Ciencias de la Computación</i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"> aj (dot) chi (dot) poot (at) gmail (dot) com</i></p>
+  <p><i class="fa fa-user" aria-hidden="true"> Estudiante de M.C.I.C.</i></p>
+  <p><i class="fa fa-globe" aria-hidden="true"><a href="http://www.saber.cic.ipn.mx/cake/SABERsvn/trunk/Alumnos/webAlumno/1386" style="color:#cfb53b"> www.cic.ipn.mx</a></i></p>
+  <br>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Work Row -->
+
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="lab">
+<div class="w3-col">
+<h1 align="center">Nuestro Laboratorio</h1>
+<h3 align="center">Laboratorio de Ciencia de Datos y Tecnología de Software / CDyTS</h3>
+<p class="msglab" text-align="justify">En el laboratorio se desarrollan nuevas herramientas, técnicas, algoritmos y metodologías para la creación y gestión de sistemas de información; todo ello con esquemas que integran el manejo de bases de datos, interfaces gráficas, minería de datos, agentes e ingeniería de software.</p>
+</div>
+
+<div class="w3-third w3-card-2 verde">
+	<h4 align="center">¿Qué es la Minería de Datos?</h4>
+	<div class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
+		<div class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-umybr8nKag" allowfullscreen="">
+			</iframe>
+
+	</div>
+</div>
+</div>
+<div class="w3-third w3-card-2 blanco">
+	<h4 align="center">Dr. Adolfo Guzmán en ONCE NOTICIAS</h4>
+	<div class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
+		<div class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NGOVDhcxwFE" allowfullscreen="">
+			</iframe>
+
+	</div>
+</div>
+</div>
+<div class="w3-third w3-card-2 rojo">
+	<h4 align="center">Sistema ECOBICI en FORO TV</h4>
+	<div class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
+		<div class="embed-responsive embed-responsive-16by9">
+		<iframe src="https://player.vimeo.com/video/209496672?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<!-- Container -->
+<div class="w3-container" style="position:relative">
+  <a onclick="w3_open()" class="w3-btn-floating-large w3-teal" style="position:absolute;top:-28px;right:24px;z-index:0;">
+  <i class="fa fa-plus"></i></a>
+</div>
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contactanos">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-10"><h2>CONTACTANOS</h2></div>
+    <p>Cualquier duda o sugerencia, no dudes en contactarnos:</p>
+      <p><i class="fa fa-user cont" aria-hidden="true"></i>  Dr. Gilberto Lorenzo Martínez Luna.</p>
+      <p><i class="fa fa-users cont" aria-hidden="true"></i> Lab. de Ciencia de Datos y Tecnología de Software (LCDyTS).</p>
+      <p><i class="fa fa-map-marker cont w3-text-teal w3-xlarge"></i>  Oficina 33, 3er Nivel, Edificio Sur, Lado Este.</p>
+      <p><i class="fa fa-phone cont w3-text-teal w3-xlarge"></i>  57-29-6000 ext 56600</p>
+      <p><i class="fa fa-envelope cont w3-text-teal w3-xlarge"></i>  llunameztli@gmail.com</p>
+      <br>
+    </div>
+    <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="enviar_email.php" method="post">
+        <div class="w3-group">
+          <label class="w3-label" for="frm-name">Nombre</label>
+          <input class="w3-input" type="text" id="frm-name" name="frm-name" value="" required>
+        </div>
+        <div class="w3-group">
+          <label class="w3-label" for="frm-email">Correo electronico</label>
+          <input class="w3-input" type="text" id="frm-email" name="frm-email" value="" required>
+        </div>
+        <div class="w3-group">
+          <label class="w3-label" for="frm-message">Mensaje</label>
+          <input class="w3-input" id="frm-message" name="frm-message" required>
+        </div>
+        <button type="submit" value="submit" class="w3-btn w3-right w3-theme"  id="frm-submit"
+        >Enviar</button>
+      </form>
+    </div>
+  </div>
+  <div class="w3-row">
+
+  </div>
+</div>
+
+<!-- Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9VgfxvsPcyFI91tTum2XzvOf7TU7Gafg"
+        ></script>
+<div id="ubicacion" style="width:100%;height:420px;"></div>
+<div class="w3-container dire" align="center" style="position:relative">
+       <h6>Dirección del Centro de Investigación en Computación:</h6>
+      <h6><i class="fa fa-map-marker cont w3-text-teal w3-xlarge"></i> Av. Juan de Dios Bátiz, Esq. Miguel Othón de Mendizábal. Col. Nueva Industrial Vallejo. Delegación Gustavo A. Madero. C.P 07738. Ciudad de México, MX.</h6>
+</div>
+<script>
+var myCenter = new google.maps.LatLng(19.5031839,-99.1475951);
+
+function initialize() {
+var mapProp = {
+  center: myCenter,
+  zoom: 17,
+  scrollwheel: false,
+  draggable: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("ubicacion"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>SIGUENOS</h4>
+  <div class="w3-col">
+    <img src="./img/cic.jpg" alt="CIC-IPN" style="width:100px">
+  </div>
+  <a class="w3-btn-floating w3-teal circlens" href="https://www.facebook.com/CIC-IPN-132332353540294/" title="Facebook"><i class="fa fa-facebook face"></i></a>
+  <a class="w3-btn-floating w3-teal circlens" href="https://twitter.com/CIC_IPN_OFICIAL" title="Twitter"><i class="fa fa-twitter twi"></i></a>
+  <a class="w3-btn-floating w3-teal circlens" href="https://plus.google.com/101763063912380488431" title="Google +"><i class="fa fa-google-plus goo"></i></a>
+  <p>Centro de Investigación en Computación</p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Ir Al Inicio</span>
+    <a class="w3-btn w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script type="text/javascript">
+            $(document).on('change', '.div-toggle', function() {
+              //console.log("Entra en cambiar??");
+              var target = $(this).data('target');
+              var show = $("option:selected", this).data('show');
+              $(target).children().addClass('hide');
+              $(show).removeClass('hide');
+            });
+            $(document).ready(function(){
+                $('.div-toggle').trigger('change');
+            });
+</script>
+
+<!-- Script For Side Navigation -->
+<script>
+function w3_open() {
+    var x = document.getElementById("mySidenav");
+    x.style.width = "300px";
+    x.style.textAlign = "center";
+    x.style.fontSize = "40px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+</script>
+
+<script src="./scripts/js/bootstrap.min.js"></script>
+
+</body>
+</html>
