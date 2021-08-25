@@ -44,7 +44,7 @@ except MySQLdb.Error as error:
 daConexion.close()
 document = {}
 
-prevDocument = pd.read_csv("/home/yadira/PycharmProjects/Thesis/src/load_document.txt", header=None, names=["idDocument"])
+prevDocument = pd.read_csv("load_document.txt", header=None, names=["idDocument"])
 print("prevDocument: ", prevDocument)
 
 loadDocument = open("load_document.txt", "a")
