@@ -1,7 +1,7 @@
 from joblib import dump, load
 import MySQLdb
 
-clf_reload = load('/home/yadira/PycharmProjects/Thesis/src/ClasificarNoticias/modelo_MLP_600_9cat.joblib')
+clf_reload = load('modelo_MLP_600_9cat.joblib')
 
 from elasticsearch import Elasticsearch
 import pandas as pd
@@ -23,8 +23,9 @@ i = 1
 # 294190
 
 daConexion = MySQLdb.connect(host="localhost",
-                             user="yadira",
-                             passwd="cic",
+                             port=2200,
+                             user="root",
+                             passwd="root",
                              db="document_analyzer")
 
 cursor = daConexion.cursor()
