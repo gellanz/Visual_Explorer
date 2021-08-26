@@ -18,6 +18,25 @@
 
     <script src="./scripts/js/jquery-1.9.1.min.js"></script>
 
+
+<!-- El siguiente estilo es un grid de 4 columnas, se usa para los alumnos de SS, licenciatura y posgrado -->
+<style>
+  .grid-container{
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-gap: 10px;
+    padding: 1%;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+</style>
+
+
 <style type="text/css">
 
 .divsistemas{
@@ -523,8 +542,8 @@
 </div>
 
 <h2>SERVICIO SOCIAL</h2>
-<div class="w3-row"><br>
-<div class="w3-third">
+<div class="grid-container">
+<div>
   <img src="./img/Ignacio.png" alt="Lic. Ignacio" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Lic. Ignacio Pablo Orozco Dávila</h3>
   <p><i class="fa fa-book " aria-hidden="true"> Lic. en Ciencias de la Informática</i></p>
@@ -533,7 +552,7 @@
   <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.linkedin.com/in/ignacio-pablo-orozco-d%C3%A1vila-00997315b" style="color:#cfb53b"> Linkedin</a></i></p>
   <br>
 </div>
-<div class="w3-third">
+<div>
   <img src="./img/JoseCarlos.png" alt="Ing. Jose Carlos" style="width:41%" class="w3-circle w3-hover-opacity">
   <h3>Ing. José Carlos Pintor Salinas</h3>
   <p><i class="fa fa-book " aria-hidden="true"> Ing. en Comunicaciones y Electrónica </i></p>
@@ -542,7 +561,7 @@
   <p><i class="fa fa-globe" aria-hidden="true"><a href="https://mx.linkedin.com/in/jose-carlos-pintor-salinas-6b4764173" style="color:#cfb53b"> Linkedin</a></i></p>
   <br>
 </div>
-<div class="w3-third">
+<div>
   <img src="./img/AbrahamR.jpg" alt="C. Abraham" style="width:45%;" class="w3-circle w3-hover-opacity">
   <h3>Ing. Abraham Ramírez Rodríguez</h3>
   <p><i class="fa fa-book " aria-hidden="true"> Ing. en Matemáticas </i></p>
@@ -551,11 +570,7 @@
   <p><i class="fa fa-globe" aria-hidden="true"><a href="http://148.204.64.166/lcdyts/Servicios/index.html" style="color:#cfb53b">Servicios de Salud</a></i></p>
   <br>
 </div>
-</div>
-
-
-<div class="w3-row"><br>
-<div class="w3-third">
+<div>
   <img src="./img/MartinN.jpg" alt="Ing. Martín " style="width:45%;" class="w3-circle w3-hover-opacity">
   <h3>Ing. Martín Alejandro Mata Valencia</h3>
   <p><i class="fa fa-book " aria-hidden="true"> Ing. en Sistemas Computacionales </i></p>
@@ -564,7 +579,7 @@
   <p><i class="fa fa-globe" aria-hidden="true"><a href="http://ucad.edu.mx/" style="color:#cfb53b">Universidad de ciencias y administración UCAD</a></i></p>
   <br>
 </div>
-<div class="w3-third">
+<div>
   <img src="./img/JazminBecerra.jpg" alt="Ing. Martín " style="width:45%;" class="w3-circle w3-hover-opacity">
   <h3>Lic. Jazmín Becerra Dávila</h3>
   <p><i class="fa fa-book " aria-hidden="true"> Lic. en Ciencias de la Informática </i></p>
@@ -573,7 +588,7 @@
   <p><i class="fa fa-globe" aria-hidden="true"><a href="" style="color:#cfb53b">Instituto Leonardo Bravo</a></i></p>
   <br>
 </div>
-<div class="w3-third">
+<div>
   <img src="./img/NestorOsiel.jpg" alt="Ing. Martín " style="width:45%;" class="w3-circle w3-hover-opacity">
   <h3>Ing. Nestor Osiel Zavaleta</h3>
   <p><i class="fa fa-book " aria-hidden="true"> Ing. Geofísica </i></p>
@@ -582,10 +597,7 @@
   <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.linkedin.com/in/nestor-osiel-zavaleta-barrales-679a06169/" style="color:#cfb53b">Escuela Superior de Ingeniería y Arquitectura ESIA </a></i></p>
   <br>
 </div>
-</div>
-
-<div class="w3-row"><br>
-  <div class="w3-third">
+  <div>
     <img src="./img/FernandoVillanueva.jpg" alt="Lic. Fernando " style="width:45%;" class="w3-circle w3-hover-opacity">
     <h3>Lic. Fernando Villanueva</h3>
     <p><i class="fa fa-book " aria-hidden="true"> Lic. en Ciencias de la Informática</i></p>
@@ -594,7 +606,7 @@
     <p><i class="fa fa-globe" aria-hidden="true"><a href="http://ucad.edu.mx/" style="color:#cfb53b">Unidad Profesional Interdisciplinaria de Ingeniería Ciencias Sociales y Administrativas </a></i></p>
     <br>
   </div>
-  <div class="w3-third">
+  <div>
     <img src="./img/Elizarraras.jpg" alt="Ing. Gustavo " style="width:45%;" class="w3-circle w3-hover-opacity">
     <h3>Ing. Gustavo Elizarraras</h3>
     <p><i class="fa fa-book " aria-hidden="true"> Ing. Mecatrónico</i></p>
@@ -603,12 +615,11 @@
     <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.upiita.ipn.mx/" style="color:#cfb53b">Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas </a></i></p>
     <br>
   </div>
-
-  </div>
+</div>
 
 <h2>PROGRAMA DELFÍN</h2>
-<div class="w3-row"><br>
-<div class="w3-third">
+<div class="grid-container">
+<div>
   <img src="./img/GiselleD1.jpg" alt="Ing. Giselle Joseline" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Ing. Giselle Joseline Romero Calixto</h3>
   <p><i class="fa fa-book " aria-hidden="true"> Ing. en Sistemas Computacionales</i></p>
@@ -617,7 +628,7 @@
   <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.ittlahuac.edu.mx/" style="color:#cfb53b">Tecnologico Nacional de México</a></i></p>
   <br>
 </div>
-<div class="w3-third">
+<div>
   <img src="./img/AngelD1.jpg" alt="Téc. Jose Angel" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Téc. Jose Angel Eduardo García de Arcos</h3>
   <p><i class="fa fa-book " aria-hidden="true"> Técnico en Sistemas Digitales </i></p>
@@ -626,7 +637,7 @@
   <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.cecyt1.ipn.mx/" style="color:#cfb53b"> CEC y T No.1 "González Vázquez Vela"</a></i></p>
   <br>
 </div>
-<div class="w3-third">
+<div>
   <img src="./img/KarolinaD1L.jpg" alt="Téc. Karolina " style="width:45%;" class="w3-circle w3-hover-opacity">
   <h3>Téc. Karolina Cedillo Sánchez</h3>
   <p><i class="fa fa-book " aria-hidden="true"> Técnico en Computación </i></p>
@@ -635,10 +646,8 @@
   <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.cecyt8.ipn.mx/" style="color:#cfb53b">CEC y T No.8 "Narciso Bassols García"</a></i></p>
   <br>
 </div>
-</div>
 
-<div class="w3-row"><br>
-<div class="w3-third">
+<div>
   <img src="./img/AnronioD.jpg" alt="Téc. Jorge Antonio " style="width:45%;" class="w3-circle w3-hover-opacity">
   <h3>Téc. Jorge Antonio Juárez Leyva</h3>
   <p><i class="fa fa-book " aria-hidden="true"> Técnico en Programación </i></p>
@@ -648,7 +657,7 @@
   <br>
 </div>
 
-<div class="w3-third">
+<div>
   <img src="./img/SarahiPerezD.jpg" alt="Ing. Sarahí " style="width:45%;" class="w3-circle w3-hover-opacity">
   <h3>Ing. Sarahí Peréz Rosas</h3>
   <p><i class="fa fa-book " aria-hidden="true"> Ing. en Tecnlogías de la Información Y Comunicación </i></p>
@@ -659,7 +668,7 @@
 </div>
 
 
-<div class="w3-third">
+<div>
   <img src="./img/BrandonDG.png" alt="Ing. Brandon " style="width:45%;" class="w3-circle w3-hover-opacity">
   <h3>Ing. Brandon Alejandro Mosqueda González</h3>
   <p><i class="fa fa-book " aria-hidden="true"> Ing. de Software </i></p>
@@ -669,11 +678,7 @@
   <br>
 </div>
 
-</div>
-
-
-<div class="w3-row"><br>
-<div class="w3-third">
+<div>
   <img src="./img/MarcosOmarDG.png" alt="Ing. Marcos Omar " style="width:45%;" class="w3-circle w3-hover-opacity">
   <h3>Ing. Marcos Omar Martínez Martínez</h3>
   <p><i class="fa fa-book " aria-hidden="true"> Ing. en Tecnologías de la Información y Comunicación </i></p>
@@ -687,8 +692,8 @@
 
 
 <h2>TESISTAS DE LINCENCIATURA</h2>
-<div class="w3-row"><br>
-<div class="w3-third">
+<div class="grid-container">
+<div>
   <img src="./img/EdgarD2.jpg" alt="Ing. Marcos Omar " style="width:45%;" class="w3-circle w3-hover-opacity">
   <h3>Ing. Edgar Beltrán Alvarado </h3>
   <p><i class="fa fa-book " aria-hidden="true"> Ing. en Telemática </i></p>
@@ -703,8 +708,8 @@
 
 
 <h2>EGRESADOS</h2>
-<div class="w3-row"><br>
-<div class="w3-third">
+<div class="grid-container">
+<div>
   <img src="./img/ingmanuel.jpg" alt="Ing Manuel" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>M. en C. Manuel Gutierrez Ceballos</h3>
   <p><i class="fa fa-book " aria-hidden="true"> M. en Ciencias de la Computación</i></p>
@@ -713,7 +718,7 @@
   <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.linkedin.com/in/manuel-gutierrez-ceballos-35a61a13b/" style="color:#cfb53b"> FenomenosUrbanos</a></i></p>
   <br>
 </div>
-<div class="w3-third">
+<div>
   <img src="./img/ingcarlos.png" alt="Ing. Carlos" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>M. en C. Carlos Roberto Esquivel Briceño</h3>
   <p><i class="fa fa-book " aria-hidden="true"> M. en Ciencias de la Computación </i></p>
@@ -723,7 +728,7 @@
   <br>
 </div>
 
-<div class="w3-third">
+<div>
   <img src="./img/ingpedro.jpg" alt="Ing Pedro" style="width:45%;" class="w3-circle w3-hover-opacity">
   <h3>M. en C. Pedro Ricardo Ortega Castellanos</h3>
   <p><i class="fa fa-book " aria-hidden="true"> M. en Ciencias de la Computación</i></p>
@@ -733,9 +738,7 @@
   <br>
 </div>
 
-</div>
-<div class="w3-row"><br>
-<div class="w3-third">
+<div>
   <img src="./img/ingdiana.jpg" alt="Ing. Diana" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>M. EN C. Diana Belem Romero Ruíz</h3>
   <p><i class="fa fa-book " aria-hidden="true">  M. en Ciencias de la Computación</i></p>
@@ -744,7 +747,7 @@
   <p><i class="fa fa-globe" aria-hidden="true"><a href="http://www.saber.cic.ipn.mx/cake/SABERsvn/trunk/Alumnos/webAlumno/1313" style="color:#cfb53b"> http://www.cic.ipn.mx/ </a></i></p>
   <br>
 </div>
-<div class="w3-third">
+<div>
   <img src="./img/mmale.jpg" alt="M. María" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>M. en S.I. María Elena Reyes Castellanos</h3>
   <p><i class="fa fa-book " aria-hidden="true"> Maestra en Sistemas de Información </i></p>
@@ -753,7 +756,7 @@
   <p><i class="fa fa-globe" aria-hidden="true"><a href="http://www.saber.cic.ipn.mx/cake/SABERsvn/trunk/Alumnos/webAlumno/1400" style="color:#cfb53b"> http://www.cic.ipn.mx/ </a></i></p>
   <br>
 </div>
-<div class="w3-third">
+<div>
   <img src="./img/ingmiguel.jpg" alt="Ing. Miguel" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>M. EN C. Miguel Angel Luna Pérez </h3>
   <p><i class="fa fa-book " aria-hidden="true">  M. en Ciencias de la Computación </i></p>
@@ -762,8 +765,7 @@
   <p><i class="fa fa-globe" aria-hidden="true"><a href="http://www.saber.cic.ipn.mx/cake/SABERsvn/trunk/Alumnos/webAlumno/1337" style="color:#cfb53b"> http://www.cic.ipn.mx/</a></i></p>
   <br>
 </div>
-<div class="w3-row"><br>
-<div class="w3-third">
+<div>
   <img src="./img/ingivonne.jpg" alt="Ing. Ivonne" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>M. EN C. Thelma Ivonne López Lara</h3>
   <p><i class="fa fa-book " aria-hidden="true"> M. en Ciencias de la Computación </i></p>
@@ -772,7 +774,7 @@
   <p><i class="fa fa-globe" aria-hidden="true"><a href="https://www.saber.cic.ipn.mx/cake/SABERsvn/trunk/Alumnos/webAlumno/1336" style="color:#cfb53b"> http://www.cic.ipn.mx/</a></i></p>
   <br>
 </div>
-<div class="w3-third">
+<div>
   <img src="./img/ingnorberto.jpg" alt="Ing. Norberto" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>M. EN C. Norberto García Lavanderos</h3>
   <p><i class="fa fa-book " aria-hidden="true">M. en Ciencias de la Computación</i></p>
@@ -781,7 +783,7 @@
   <p><i class="fa fa-globe" aria-hidden="true"><a href="https://mx.linkedin.com/in/norberto-garcia-09422b62" style="color:#cfb53b"> https://www.linkedin.com/ </a></i></p>
   <br>
 </div>
-<div class="w3-third">
+<div>
   <img src="./img/angelchipoot.jpg" alt="Ing. Ángel" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>M. EN C. Ángel de Jesús Chi Poot</h3>
   <p><i class="fa fa-book " aria-hidden="true">M. en Ciencias de la Computación</i></p>
@@ -791,8 +793,7 @@
   <br>
 </div>
 </div>
-</div>
-</div>
+
 
 <!-- Work Row -->
 
