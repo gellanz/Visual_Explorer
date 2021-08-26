@@ -1,0 +1,12 @@
+NaturalPlace
+PopulatedPlace
+Localidad
+Estado de los Estados Unidos
+Organización territorial de México
+Distritos del Perú
+Capital (política)
+Municipios de México
+Delegaciones del Distrito Federal (México)
+Organisation
+Ciudad-condado consolidada
+SpatialThing
