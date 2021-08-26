@@ -8,3 +8,4 @@ Docker/metricbeat-7.13.2-amd64.deb
 Automate/elasticsearch/mlp_category/modelo_MLP_600_9cat.joblib
 Scripts/testingfreeling/__pycache__
 Scripts/testingfreeling/_pyfreeling.so
+cicwebpage/*
