@@ -46,6 +46,13 @@ for file in "/docker/*"; do dos2unix $file; done
 #          se destruyó, se tienen que ejecutar los siguientes comandos: \n
 #          cd /scripts \n ./boot_db_first_time.sh"
 
+# Installing Python libraries
+sudo apt-get install -y python-dev libmysqlclient-dev
+sudo apt install -y python-pip
+pip3 install pandas
+pip3 install elasticsearch==7.13.2
+pip3 install mysqlclient
+
 #Installing freeling and its dependencies
 cd /
 wget https://github.com/TALP-UPC/FreeLing/releases/download/4.2/freeling-4.2-bionic-amd64.deb
