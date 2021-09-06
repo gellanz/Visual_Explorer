@@ -48,8 +48,13 @@ for element in cursor:
     max_id_document = element[1]
 
 
-url = "/home/yadira/PycharmProjects/Thesis/src/ClasificarNoticias/te_600_9Cat_df_term_doc.csv"
+# url = "/automate/elasticsearch/mlp_category/te_600_9Cat_df_term_doc.csv"
+url = "/automate/elasticsearch/mlp_category/te_600_9Cat_df_term_doc.csv"
+# url = "/home/yadira/PycharmProjects/Thesis/src/ClasificarNoticias/te_600_9Cat_df_term_doc.csv"
 # header = X_test.head(1)
+
+# with ZipFile("te_600_9Cat_df_term_doc.zip", 'r') as fzip:
+
 header = pd.read_csv(url, header=0, nrows=1)
 # print("header")
 # print(header.head(20))
@@ -60,15 +65,15 @@ header = pd.read_csv(url, header=0, nrows=1)
 for idDocument in range(min_id_document, max_id_document, 1):
     print("Iteración número: ", i)
 
-    es = Elasticsearch('148.204.66.69')
+    es = Elasticsearch('localhost:9200', timeout=300)
     document = es.search(index="document_analyzer", body={"query": {"term": {"idDocument": idDocument}}})
 
-    # pprint.pprint(document)
-    # for hit in document['hits']['hits']:
-    #    print("idDocument: %(idDocument)s  \t category: %(category)s \n content: %(content)s \n" % hit["_source"])
+        # pprint.pprint(document)
+        # for hit in document['hits']['hits']:
+        #    print("idDocument: %(idDocument)s  \t category: %(category)s \n content: %(content)s \n" % hit["_source"])
 
 
-    # print( "idDocument: %(idDocument)s " % hit["_source"])
+        # print( "idDocument: %(idDocument)s " % hit["_source"])
 
     documentDF = pd.DataFrame()
     documentDF = documentDF.append(header, ignore_index=True)
@@ -77,31 +82,31 @@ for idDocument in range(min_id_document, max_id_document, 1):
 
     documentDF = documentDF.drop([0], axis=0)
 
-    # print("documentDF.drop([0],axis=0)")
-    # print(documentDF)
+        # print("documentDF.drop([0],axis=0)")
+        # print(documentDF)
 
-    # print("document['hits']['hits']['_source']")
-    # print(document['hits']['hits'][0]['_source'])
+        # print("document['hits']['hits']['_source']")
+        # print(document['hits']['hits'][0]['_source'])
 
-    # #####################################
+        # #####################################
 
     if len(document['hits']['hits']) > 0:
         sourceDict = document['hits']['hits'][0]['_source']
-        # print("sourceDict")
-        # print(sourceDict)
+            # print("sourceDict")
+            # print(sourceDict)
 
-        # id_doc = [sourceDict.get("idDocument")]
-        # cat = [sourceDict.get("category")]
+            # id_doc = [sourceDict.get("idDocument")]
+            # cat = [sourceDict.get("category")]
 
-        # print("id_doc: ", id_doc)
-        # print("cat: ", cat)
+            # print("id_doc: ", id_doc)
+            # print("cat: ", cat)
 
         documentDF["ID_DOCUMENT"] = [sourceDict.get("idDocument")]
         documentDF["CATEGORY"] = [sourceDict.get("category")]
 
-        # print("documentDF : ")
-        # print(documentDF)
-        # print(documentDF["ID_DOCUMENT"], documentDF["CATEGORY"])
+            # print("documentDF : ")
+            # print(documentDF)
+            # print(documentDF["ID_DOCUMENT"], documentDF["CATEGORY"])
 
         text = sourceDict.get("content")
         text = text.split(" ")
@@ -111,26 +116,26 @@ for idDocument in range(min_id_document, max_id_document, 1):
                 if set([word]).issubset(documentDF.columns):
                     documentDF[word] = 1
 
-                    # print("documentDF con el VSM")
-        # print(documentDF.head(10))
+                        # print("documentDF con el VSM")
+            # print(documentDF.head(10))
 
-        # ###########################################################################
+            # ###########################################################################
 
-        # print("\ndocumentDF")
-        # documentDF.head(20)
+            # print("\ndocumentDF")
+            # documentDF.head(20)
 
-        # print("documentDF = documentDF.fillna(0)")
+            # print("documentDF = documentDF.fillna(0)")
         documentDF = documentDF.fillna(0)
 
-        # print("documentDF = documentDF.fillna(0)  ")
-        # print(documentDF)
+            # print("documentDF = documentDF.fillna(0)  ")
+            # print(documentDF)
 
         documentDF = documentDF.drop("ID_DOCUMENT", axis=1)
         documentDF = documentDF.drop("CATEGORY", axis=1)
-        # documentDF.head(20)    #Entrada del predictor
+            # documentDF.head(20)    #Entrada del predictor
 
-        # print("documentDF drop id y cat")
-        # print(documentDF.head(5))
+            # print("documentDF drop id y cat")
+            # print(documentDF.head(5))
 
         catMLP = clf_reload.predict(documentDF)
         catMLP = catMLP[0]
@@ -139,17 +144,17 @@ for idDocument in range(min_id_document, max_id_document, 1):
         print("category: ", [sourceDict.get("category")])
         print("catMLP: ", catMLP)
 
-        # Actualizar los la categoría cálculada en el índice
+            # Actualizar los la categoría cálculada en el índice
 
         documentUP = {}
-        # documentUP["idDocument"] = sourceDict.get("idDocument")
-        # documentUP["categoryMLP"] = catMLP
+            # documentUP["idDocument"] = sourceDict.get("idDocument")
+            # documentUP["categoryMLP"] = catMLP
 
         documentUP = {"doc": {"categoryMLP": catMLP}}
 
-        es = Elasticsearch('148.204.66.69')
+        es = Elasticsearch('localhost:9200', timeout=300)
 
-        # result = es.index(index='document_analyzer', doc_type='new', id=sourceDict.get("idDocument"), body=documentUP)
+            # result = es.index(index='document_analyzer', doc_type='new', id=sourceDict.get("idDocument"), body=documentUP)
         result = es.update(index='document_analyzer', doc_type="new", id=sourceDict.get("idDocument"), body=documentUP)
         print("result: ", result['result'])
 

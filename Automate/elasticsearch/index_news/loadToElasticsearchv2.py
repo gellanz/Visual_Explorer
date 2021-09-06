@@ -57,7 +57,7 @@ for element in cursor:
     print("Iteración número: ", iter)
     print("Doc a procesar: ", element[0])
     if element[0] not in prevDocument:
-        es = Elasticsearch()
+        es = Elasticsearch('localhost:9200', timeout=300)
 
         print(document)
         print("")

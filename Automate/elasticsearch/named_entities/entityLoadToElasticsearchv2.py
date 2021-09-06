@@ -69,7 +69,7 @@ for element in cursor:
 
     if dup == 0:
 
-        es = Elasticsearch()
+        es = Elasticsearch('localhost:9200', timeout=300)
 
         #print(document)
         print("")
