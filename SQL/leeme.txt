@@ -1,3 +1,14 @@
 En esta carpeta se usó un dump de la base de datos. Se requiere que se pida dicho archivo
-al Dr. Gilberto Lorenzo Martínez Luna. Se descomprime en esta misma carpeta y es todo lo
-que se tiene que hacer.
+al Dr. Gilberto Lorenzo Martínez Luna. Se descomprime en esta misma carpeta.
+Si es la primera vez que se creara la base de datos dentro de la Vagrant VM, se 
+tienen que realizar los siguientes pasos:
+
+1.- Entrar a la máquina virtual de Vagrant
+    vagrant ssh
+2.- Ya dentro de la VM, navegar a la carpeta scripts
+    cd /scripts
+3.- Ejecutar el archivo boot_db_first_time.sh.
+    ./boot_db_first_time.sh
+    Este proceso puede que tarde algo de tiempo,pero no más de 3 hrs, si tarda más de esto es 
+    posible que se haya buggeado. Matar al proceso actual con Ctrl+c e intentar de nuevo. 
+    Si esto no lo soluciona, contactar a Gustavo Elizarraras: angelizarrarasg@gmail.com 
