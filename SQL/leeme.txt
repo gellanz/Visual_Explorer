@@ -1,0 +1,3 @@
+En esta carpeta se usó un dump de la base de datos. Se requiere que se pida dicho archivo
+al Dr. Gilberto Lorenzo Martínez Luna. Se descomprime en esta misma carpeta y es todo lo
+que se tiene que hacer.
