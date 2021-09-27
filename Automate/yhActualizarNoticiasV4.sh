@@ -17,8 +17,9 @@ do
 
       echo ""
       echo Inicia la descarga de noticias desde Internet
-      cd /home/yadira/PycharmProjects/Thesis/src/NewsCrawler/
-      python3 '/home/yadira/PycharmProjects/Thesis/src/NewsCrawler/MDSexampleSLV4.py'
+      # cd /home/yadira/PycharmProjects/Thesis/src/NewsCrawler/
+      # python3 '/home/yadira/PycharmProjects/Thesis/src/NewsCrawler/MDSexampleSLV4.py'
+      python3 /automate/news_download/MDSexampleSLV4.py
       echo Se ejecuto la descarga de noticias desde Internet
 
 
@@ -42,9 +43,8 @@ do
       echo ""
       echo Inicia la actualización de Entidades Nombradas
       # cd /home/yadira/PycharmProjects/Thesis/src/NewsCrawler/
-      cd /automate/data_DBpedia
       # python3 '/home/yadira/PycharmProjects/Thesis/src/NewsCrawler/getEntitiesFromDBpediaV2.py'
-      python3 getEntitiesFromDBpediaV2.py
+      python3 /automate/data_DBpedia/getEntitiesFromDBpediaV2.py
       echo Se ejecuto la actualización de Entidades Nombradas
 
       # Cargar las noticias de stage a las tablas CORE, Doc: “ETL ST_DA_DOCUMENT_NEWS”
