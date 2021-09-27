@@ -82,10 +82,79 @@ entities_body = {
         }
 }
 
+
+
 print("Creating 'document_analyzer' index")
 es.indices.create(index = 'document_analyzer', body = news_body)
 print("Creating 'named_entities' index")
 es.indices.create(index = 'named_entities', body = entities_body)
+
+# POST _update_by_query, checar manual técnico M. Yadira pag. 12
+
+update_query_news = {
+    "query": { 
+        "constant_score" : { 
+            "filter" : { 
+                "exists" : {
+                    "field" : "category" 
+                } 
+            } 
+        } 
+    }, 
+    "script" : {
+        "inline": "ctx._source.categoryKW = ctx._source.category;" 
+        }
+}
+print("Updating by query")
+es.update_by_query(body=update_query_news, index='document_analyzer')
+
+update_query_news = {
+    "query":{ 
+        "constant_score":{ 
+            "filter":{ 
+                "exists": {
+                    "field":"content"
+                } 
+            }
+        }
+    },
+    "script":{ 
+        "inline":"ctx._source.contentWsTk = ctx._source.content;" }
+}
+print("Updating by query")
+es.update_by_query(body=update_query_news, index='document_analyzer')
+
+update_query_news = {
+    "query":{ 
+        "constant_score":{ 
+            "filter":{
+                "exists": {
+                    "field":"content"
+                } 
+            } 
+        } 
+    }, 
+    "script":{
+        "ctx._source.contentFD = ctx._source.content;" }
+}
+print("Updating by query")
+es.update_by_query(body=update_query_news, index='document_analyzer')
+
+update_query_news = {
+    "query":{ 
+        "constant_score":{ 
+            "filter":{
+                "exists": {
+                    "field":"sourceName"
+                } 
+            } 
+        } 
+    }, 
+    "script":{
+        "inline": "ctx._source.sourceNameKW = ctx._source.sourceName;"}
+}
+print("Updating by query")
+es.update_by_query(body=update_query_news, index='document_analyzer')
 
 # http://localhost:5601/app/management/data/index_management/indices
 # http://localhost:5601/app/dev_tools#/console?load_from=https:/www.elastic.co/guide/en/elasticsearch/reference/current/snippets/2215.console
