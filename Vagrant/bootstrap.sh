@@ -52,6 +52,7 @@ sudo apt install -y python-pip
 pip3 install pandas
 pip3 install elasticsearch==7.13.2
 pip3 install mysqlclient
+pip3 install nltk
 
 #Installing freeling and its dependencies
 cd /
