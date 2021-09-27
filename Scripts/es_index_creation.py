@@ -102,7 +102,7 @@ update_query_news = {
         } 
     }, 
     "script" : {
-        "inline": "ctx._source.categoryKW = ctx._source.category;" 
+        "source": "ctx._source.categoryKW = ctx._source.category;" 
         }
 }
 print("Updating by query")
@@ -119,7 +119,7 @@ update_query_news = {
         }
     },
     "script":{ 
-        "inline":"ctx._source.contentWsTk = ctx._source.content;" }
+        "source":"ctx._source.contentWsTk = ctx._source.content;" }
 }
 print("Updating by query")
 es.update_by_query(body=update_query_news, index='document_analyzer')
@@ -135,7 +135,7 @@ update_query_news = {
         } 
     }, 
     "script":{
-        "ctx._source.contentFD = ctx._source.content;" }
+        "source":"ctx._source.contentFD = ctx._source.content;" }
 }
 print("Updating by query")
 es.update_by_query(body=update_query_news, index='document_analyzer')
@@ -151,7 +151,7 @@ update_query_news = {
         } 
     }, 
     "script":{
-        "inline": "ctx._source.sourceNameKW = ctx._source.sourceName;"}
+        "source": "ctx._source.sourceNameKW = ctx._source.sourceName;"}
 }
 print("Updating by query")
 es.update_by_query(body=update_query_news, index='document_analyzer')
