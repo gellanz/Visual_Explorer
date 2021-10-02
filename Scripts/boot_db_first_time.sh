@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
+source /scripts/stop_ELK.sh
 source mysql-faster-imports.sh
 mysqlOptimizeForImports
-source /scripts/stop_ELK.sh
 cd 
 cd /sql
 mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS document_analyzer"
