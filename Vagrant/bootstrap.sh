@@ -3,7 +3,7 @@
 # Update Packages
 apt-get update
 # Upgrade Packages
-apt-get upgrade
+apt-get upgrade --fix-missing
 
 # Basic Linux Stuff
 apt-get install -y git
@@ -47,8 +47,8 @@ for file in "/docker/*"; do dos2unix $file; done
 #          cd /scripts \n ./boot_db_first_time.sh"
 
 # Installing Python libraries
+sudo apt-get -y install python3-pip
 sudo apt-get install -y python-dev libmysqlclient-dev
-sudo apt install -y python-pip
 pip3 install pandas
 pip3 install elasticsearch==7.13.2
 pip3 install mysqlclient
